@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Primavera.Logistics.Extensibility", "Primavera.Logistics.Extensibility.csproj", "{DC705914-CDAC-4104-A430-2AF7618DDA66}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DC705914-CDAC-4104-A430-2AF7618DDA66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC705914-CDAC-4104-A430-2AF7618DDA66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC705914-CDAC-4104-A430-2AF7618DDA66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC705914-CDAC-4104-A430-2AF7618DDA66}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5BF011DF-8D1E-4E42-8612-510DBD6B417B}
+	EndGlobalSection
+EndGlobal
