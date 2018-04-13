@@ -11,7 +11,7 @@ namespace Primavera.Logistics.Extensibility.Sales
         public override void DepoisDeGravar(VndBEDocumentoVenda clsDocumentoVenda, ref string strAvisos, ref string IdDocLiqRet, ref string IdDocLiqRetGar, ExtensibilityEventArgs e)
         {
             string outputPDF = @"C:\temp\invoice.pdf";
-            string emailAdress = @"sergio.sereno@primaverabss.com";
+            string emailAdress = @" -- INSERT A VALID EMAIL WHERE -- ";
 
             try
             {
