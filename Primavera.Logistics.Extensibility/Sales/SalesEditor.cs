@@ -1,7 +1,7 @@
 ﻿using Primavera.Extensibility.BusinessEntities.ExtensibilityService.EventArgs;
 using Primavera.Extensibility.Sales.Editors;
 
-namespace Primavera.Logistics.Extensibility.Purchases
+namespace Primavera.Logistics.Extensibility.Sales
 {
     public class SalesEditor: EditorVendas
     {
