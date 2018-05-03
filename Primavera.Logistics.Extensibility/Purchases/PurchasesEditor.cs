@@ -1,5 +1,10 @@
-﻿using Primavera.Extensibility.BusinessEntities.ExtensibilityService.EventArgs;
+﻿#region References
+
+using Primavera.Extensibility.BusinessEntities.ExtensibilityService.EventArgs;
 using Primavera.Extensibility.Purchases.Editors;
+using Primavera.Logistics.Extensibility.Static;
+
+#endregion
 
 namespace Primavera.Logistics.Extensibility.Purchases
 {
@@ -7,12 +12,13 @@ namespace Primavera.Logistics.Extensibility.Purchases
     {
         public override void AntesDeGravar(ref bool Cancel, ExtensibilityEventArgs e)
         {
-            if (!GlobalFunctions.ValidateZipCode(this.DocumentoCompra.CodigoPostal))
+            base.AntesDeGravar(ref Cancel, e);
+
+            if (!GlobalFunctions.ValidateZipCode(DocumentoCompra.CodigoPostal))
             {
                 PSO.Dialogos.MostraAviso("The zip code is invalid. A valid format must be like this '9999-999'.");
                 Cancel = true;
             }
-            base.AntesDeGravar(ref Cancel, e);
         }
     }
 }
