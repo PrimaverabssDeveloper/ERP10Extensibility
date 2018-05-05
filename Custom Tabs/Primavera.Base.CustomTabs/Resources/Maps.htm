@@ -1,0 +1,54 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+<body>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript">
+
+        window.onload = function () {
+            LoadMap();
+        }
+        function LoadMap() {
+            var mapOptions = {
+                zoom: 12,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+
+            var infoWindow = new google.maps.InfoWindow();
+            var map = new google.maps.Map(document.getElementById("dvMap"), mapOptions);
+            var geocoder = new google.maps.Geocoder();
+
+            geocodeAddress(geocoder, map, infoWindow);
+        }
+
+        function geocodeAddress(geocoder, resultsMap, infoWindow) {
+
+            geocoder.geocode({ 'address': '@adress' }, function (results, status) {
+                if (status === 'OK') {
+                    resultsMap.setCenter(results[0].geometry.location);
+                    var marker = new google.maps.Marker({
+                        map: resultsMap,
+                        position: results[0].geometry.location,
+                        title: 'Map'
+                    });
+
+                    (function (marker) {
+                        google.maps.event.addListener(marker, "click", function (e) {
+                            infoWindow.setContent("<div style = 'width:200px;min-height:40px'>" + '@pininformation' + "</div>");
+                            infoWindow.open(resultsMap, marker);
+                        });
+                    })(marker);
+
+                } else {
+                    alert('Geocode was not successful for the following reason: ' + status);
+                }
+            });
+        }
+    </script>
+    <div id="dvMap" style="width: 610px; height: 405px">
+    </div>
+</body>
+</html>

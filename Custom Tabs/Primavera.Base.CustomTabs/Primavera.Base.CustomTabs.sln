@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Primavera.Base.CustomTabs", "Primavera.Base.CustomTabs.csproj", "{EA4C6936-F9CD-496B-87EA-E7A0B0881FB5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA4C6936-F9CD-496B-87EA-E7A0B0881FB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA4C6936-F9CD-496B-87EA-E7A0B0881FB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA4C6936-F9CD-496B-87EA-E7A0B0881FB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA4C6936-F9CD-496B-87EA-E7A0B0881FB5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {84F7B428-68EA-4936-808F-1C14C6BF52A5}
+	EndGlobalSection
+EndGlobal
