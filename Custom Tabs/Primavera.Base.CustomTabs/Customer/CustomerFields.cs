@@ -41,5 +41,6 @@ namespace Primavera.Base.CustomTabs.Customer
             cliente.CamposUtil["CDU_CampoVar2"].Valor = CDUCampoVar2.Text;
             cliente.CamposUtil["CDU_CampoVar3"].Valor = CDUCampoVar3.Text;
         }
+
     }
 }

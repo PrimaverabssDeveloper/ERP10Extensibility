@@ -61,9 +61,9 @@
       <HintPath>..\..\..\Program Files (x86)\PRIMAVERA\SG100\Apl\Primavera.Extensibility.Purchases.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Primavera.Extensibility.Sales">
-      <HintPath>..\..\..\Program Files (x86)\PRIMAVERA\SG100\Apl\Primavera.Extensibility.Sales.dll</HintPath>
-      <Private>False</Private>
+    <Reference Include="Primavera.Extensibility.Sales, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\PRIMAVERA\SG100\Apl\Primavera.Extensibility.Sales.dll</HintPath>
     </Reference>
     <Reference Include="StdBE100">
       <HintPath>..\..\..\Program Files (x86)\PRIMAVERA\SG100\Apl\StdBE100.dll</HintPath>

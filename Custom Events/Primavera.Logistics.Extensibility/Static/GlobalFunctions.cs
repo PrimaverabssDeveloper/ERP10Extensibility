@@ -1,12 +1,8 @@
-﻿#region References
-
-using System;
+﻿using System;
 using System.Text;
 using System.Text.RegularExpressions;
 using ErpBS100;
 using StdPlatBS100;
-
-#endregion
 
 namespace Primavera.Logistics.Extensibility.Static
 {

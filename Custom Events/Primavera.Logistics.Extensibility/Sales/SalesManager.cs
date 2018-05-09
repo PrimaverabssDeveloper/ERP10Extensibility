@@ -1,14 +1,10 @@
-﻿#region References
-
+﻿using Primavera.Extensibility.BusinessEntities.ExtensibilityService.EventArgs;
+using Primavera.Extensibility.Sales.Services;
+using Primavera.Logistics.Extensibility.Static;
 using System;
 using System.Text;
 using System.Threading.Tasks;
-using Primavera.Extensibility.BusinessEntities.ExtensibilityService.EventArgs;
-using Primavera.Extensibility.Sales.Services;
-using Primavera.Logistics.Extensibility.Static;
 using VndBE100;
-
-#endregion
 
 namespace Primavera.Logistics.Extensibility.Sales
 {
