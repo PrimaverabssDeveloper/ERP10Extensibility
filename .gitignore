@@ -260,3 +260,4 @@ paket-files/
 __pycache__/
 *.pyc
 /Primavera.Base.Party
+/Custom Code/Primavera.CustomCode/PrimeiraFuncao.cs

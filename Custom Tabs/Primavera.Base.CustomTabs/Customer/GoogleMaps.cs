@@ -2,6 +2,7 @@
 using Primavera.Extensibility.Base.Editors;
 using Primavera.Extensibility.CustomTab;
 using System.IO;
+using System.Runtime.InteropServices;
 using System.Text;
 
 namespace Primavera.Base.CustomTabs.Customer
@@ -9,6 +10,7 @@ namespace Primavera.Base.CustomTabs.Customer
     /// <summary>
     /// Add a new Custom tab to the customer window with map.
     /// </summary>
+    [Guid("8CB3FB85-BB4D-46BC-95D7-95DBB4D38117")]
     public partial class GoogleMaps : CustomTab<FichaClientes>
     {
         public GoogleMaps()

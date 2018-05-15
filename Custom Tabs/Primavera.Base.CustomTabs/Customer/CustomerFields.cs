@@ -3,12 +3,14 @@ using Primavera.Extensibility.Base.Editors;
 using Primavera.Extensibility.CustomTab;
 using StdBE100;
 using System;
+using System.Runtime.InteropServices;
 
 namespace Primavera.Base.CustomTabs.Customer
 {
     /// <summary>
     /// Working with user fields.
     /// </summary>
+    [Guid("C65DCFA6-9AD6-432D-8DF6-E26862B276D1")]
     public partial class CustomerFields : CustomTab<FichaClientes>
     {
         public CustomerFields()
