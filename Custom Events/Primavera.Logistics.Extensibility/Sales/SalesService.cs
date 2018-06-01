@@ -8,7 +8,7 @@ using VndBE100;
 
 namespace Primavera.Logistics.Extensibility.Sales
 {
-    public class SalesManager : VndBSVendas
+    public class SalesService : VndBSVendas
     {
         public override void DepoisDeGravar(VndBEDocumentoVenda clsDocumentoVenda,
             ref string strAvisos,
