@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\..\..\..\Program Files %28x86%29\PRIMAVERA\SG100\Config\LE\Extensions\DEMO10\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -39,8 +39,20 @@
       <HintPath>..\..\..\..\Program Files (x86)\Common Files\PRIMAVERA\SG100\DevExpress.XtraBars.v17.1.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="ErpBS100">
+      <HintPath>..\..\..\..\Program Files (x86)\PRIMAVERA\SG100\Apl\ErpBS100.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Primavera.Extensibility.CustomForm">
       <HintPath>..\..\..\..\Program Files (x86)\PRIMAVERA\SG100\Apl\Primavera.Extensibility.CustomForm.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="StdBE100">
+      <HintPath>..\..\..\..\Program Files (x86)\PRIMAVERA\SG100\Apl\StdBE100.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="StdBESql100">
+      <HintPath>..\..\..\..\Program Files (x86)\PRIMAVERA\SG100\Apl\StdBESql100.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="StdPlatBS100">
@@ -59,17 +71,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FDU_DrillDown.cs">
+    <Compile Include="DrillDownManager.cs" />
+    <Compile Include="fdu_ListaVendas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FDU_DrillDown.Designer.cs">
-      <DependentUpon>FDU_DrillDown.cs</DependentUpon>
+    <Compile Include="fdu_ListaVendas.Designer.cs">
+      <DependentUpon>fdu_ListaVendas.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="FDU_DrillDown.resx">
-      <DependentUpon>FDU_DrillDown.cs</DependentUpon>
+    <EmbeddedResource Include="fdu_ListaVendas.resx">
+      <DependentUpon>fdu_ListaVendas.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
