@@ -16,13 +16,14 @@ namespace Primavera.CustomRibbon
         #endregion
 
         #region Override
-    
-        public override void DepoisDeAbrirEmpresa(ExtensibilityEventArgs e)
+
+        public override void DepoisDeCriarMenus(ExtensibilityEventArgs e)
         {
-            base.DepoisDeAbrirEmpresa(e);
+            base.DepoisDeCriarMenus(e);
 
             RegisterAddin();
         }
+
         #endregion
 
         #region  Private Events
