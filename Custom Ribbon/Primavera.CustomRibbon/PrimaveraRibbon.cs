@@ -79,8 +79,12 @@ namespace Primavera.CustomRibbon
 
         private void CreateGroupButton32(string buttonId, string buttonDescription, Image buttonImage )
         {
-
-            this.PSO.Ribbon.CriaRibbonButton(RibbonConstants.cIDTAB, RibbonConstants.CIDGROUP, buttonId, buttonDescription,true, buttonImage);
+            switch (buttonId)
+            {
+                case RibbonConstants.CIDBOTAO1:
+                    this.PSO.Ribbon.CriaRibbonButton(RibbonConstants.cIDTAB, RibbonConstants.CIDGROUP, buttonId, buttonDescription, true, buttonImage);
+                    break;
+            }
         }
 
         #endregion
