@@ -38,10 +38,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.CDU_IgnoraElemFin = new Primavera.Platform.Extensibility.Controls.CheckEdit();
-            this.CDU_AplicaDescComercIntegracao = new Primavera.Platform.Extensibility.Controls.CheckEdit();
+            this.CDU_IgnoraElemFin = new Primavera.Platform.Extensibility.Controls.PriCheckEdit();
+            this.CDU_AplicaDescComercIntegracao = new Primavera.Platform.Extensibility.Controls.PriCheckEdit();
             this.label5 = new System.Windows.Forms.Label();
-            this.CDU_GLNFornecedor = new Primavera.Platform.Extensibility.Controls.TextEdit();
+            this.CDU_GLNFornecedor = new Primavera.Platform.Extensibility.Controls.PriTextEdit();
             this.ManualCDU.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -193,9 +193,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private Platform.Extensibility.Controls.CheckEdit CDU_IgnoraElemFin;
-        private Platform.Extensibility.Controls.CheckEdit CDU_AplicaDescComercIntegracao;
+        private Platform.Extensibility.Controls.PriCheckEdit CDU_IgnoraElemFin;
+        private Platform.Extensibility.Controls.PriCheckEdit CDU_AplicaDescComercIntegracao;
         private System.Windows.Forms.Label label5;
-        private Platform.Extensibility.Controls.TextEdit CDU_GLNFornecedor;
+        private Platform.Extensibility.Controls.PriTextEdit CDU_GLNFornecedor;
     }
 }
