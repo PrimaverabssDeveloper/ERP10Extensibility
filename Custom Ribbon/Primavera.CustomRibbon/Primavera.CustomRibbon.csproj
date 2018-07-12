@@ -32,9 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Primavera.Extensibility.BusinessEntities">
-      <HintPath>..\..\..\Program Files (x86)\PRIMAVERA\SG100\Apl\Primavera.Extensibility.BusinessEntities.dll</HintPath>
-      <Private>False</Private>
+    <Reference Include="Primavera.Extensibility.BusinessEntities, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\PRIMAVERA\SG100\Apl\Primavera.Extensibility.BusinessEntities.dll</HintPath>
     </Reference>
     <Reference Include="Primavera.Extensibility.Integration">
       <HintPath>..\..\..\Program Files (x86)\PRIMAVERA\SG100\Apl\Primavera.Extensibility.Integration.dll</HintPath>

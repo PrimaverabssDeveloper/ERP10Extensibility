@@ -38,8 +38,13 @@ namespace Primavera.CustomRibbon
                 // Trace to file.
                 this.PSO.Diagnosticos.TraceFicheiro(@"C:\erp.log", "The user has clicked the extensibility button.");
 
-                //You must change the application path.
-                Process.Start(@"C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\devenv.exe");
+                switch (Id)
+                {
+                    case RibbonConstants.CIDBOTAO1:
+                        //You must change the application path.
+                        Process.Start(@"C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\devenv.exe");
+                        break;
+                }
             }
             catch (System.Exception ex)
             {
@@ -79,12 +84,7 @@ namespace Primavera.CustomRibbon
 
         private void CreateGroupButton32(string buttonId, string buttonDescription, Image buttonImage )
         {
-            switch (buttonId)
-            {
-                case RibbonConstants.CIDBOTAO1:
-                    this.PSO.Ribbon.CriaRibbonButton(RibbonConstants.cIDTAB, RibbonConstants.CIDGROUP, buttonId, buttonDescription, true, buttonImage);
-                    break;
-            }
+            this.PSO.Ribbon.CriaRibbonButton(RibbonConstants.cIDTAB, RibbonConstants.CIDGROUP, buttonId, buttonDescription, true, buttonImage);
         }
 
         #endregion
