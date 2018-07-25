@@ -32,9 +32,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Primavera.Extensibility.BusinessEntities">
-      <HintPath>..\..\..\Program Files (x86)\PRIMAVERA\SG100\Apl\Primavera.Extensibility.BusinessEntities.dll</HintPath>
-      <Private>False</Private>
+    <Reference Include="AdmBS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\PRIMAVERA\SG100\Apl\AdmBS100.dll</HintPath>
+    </Reference>
+    <Reference Include="ErpBS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\PRIMAVERA\SG100\Apl\ErpBS100.dll</HintPath>
+    </Reference>
+    <Reference Include="Primavera.Extensibility.BusinessEntities, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\PRIMAVERA\SG100\Apl\Primavera.Extensibility.BusinessEntities.dll</HintPath>
     </Reference>
     <Reference Include="Primavera.Extensibility.Integration">
       <HintPath>..\..\..\Program Files (x86)\PRIMAVERA\SG100\Apl\Primavera.Extensibility.Integration.dll</HintPath>
@@ -77,16 +85,16 @@
       <ExcludeFromStyleCop>True</ExcludeFromStyleCop>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Resource.Designer.cs">
+    <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Resource.resx</DependentUpon>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resource.resx">
+    <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

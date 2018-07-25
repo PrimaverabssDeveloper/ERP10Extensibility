@@ -1,9 +1,9 @@
-﻿using Primavera.Extensibility.BusinessEntities.ExtensibilityService.EventArgs;
+﻿using System.Diagnostics;
+using System.Drawing;
+using Primavera.CustomRibbon.Properties;
+using Primavera.Extensibility.BusinessEntities.ExtensibilityService.EventArgs;
 using Primavera.Extensibility.Platform.Services;
 using StdPlatBS100;
-using System;
-using System.Diagnostics;
-using System.Drawing;
 
 namespace Primavera.CustomRibbon
 {
@@ -16,13 +16,14 @@ namespace Primavera.CustomRibbon
         #endregion
 
         #region Override
-    
-        public override void DepoisDeAbrirEmpresa(ExtensibilityEventArgs e)
+
+        public override void DepoisDeCriarMenus(ExtensibilityEventArgs e)
         {
-            base.DepoisDeAbrirEmpresa(e);
+            base.DepoisDeCriarMenus(e);
 
             RegisterAddin();
         }
+
         #endregion
 
         #region  Private Events
@@ -37,8 +38,13 @@ namespace Primavera.CustomRibbon
                 // Trace to file.
                 this.PSO.Diagnosticos.TraceFicheiro(@"C:\erp.log", "The user has clicked the extensibility button.");
 
-                //You must change the application path.
-                Process.Start(@"C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\devenv.exe");
+                switch (Id)
+                {
+                    case RibbonConstants.cIDBUTTON1:
+                        //You must change the application path.
+                        Process.Start(@"C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\devenv.exe");
+                        break;
+                }
             }
             catch (System.Exception ex)
             {
@@ -59,7 +65,7 @@ namespace Primavera.CustomRibbon
             // Register the add-in.
             CriateTab();
             CreateGroup();
-            CreateGroupButton32(RibbonConstants.CIDBOTAO1, "Visual Studio", Resource.VS2017_256x256);
+            CreateGroupButton32(RibbonConstants.cIDBUTTON1, "Visual Studio", Resources.VS2017_256x256);
         }
 
         #endregion
@@ -73,13 +79,12 @@ namespace Primavera.CustomRibbon
 
         private void CreateGroup()
         {
-            this.PSO.Ribbon.CriaRibbonGroup(RibbonConstants.cIDTAB, "Extensibility", RibbonConstants.CIDGROUP);
+            this.PSO.Ribbon.CriaRibbonGroup(RibbonConstants.cIDTAB, "Extensibility", RibbonConstants.cIDGROUP);
         }
 
         private void CreateGroupButton32(string buttonId, string buttonDescription, Image buttonImage )
         {
-
-            this.PSO.Ribbon.CriaRibbonButton(RibbonConstants.cIDTAB, RibbonConstants.CIDGROUP, buttonId, buttonDescription,true, buttonImage);
+            this.PSO.Ribbon.CriaRibbonButton(RibbonConstants.cIDTAB, RibbonConstants.cIDGROUP, buttonId, buttonDescription, true, buttonImage);
         }
 
         #endregion
