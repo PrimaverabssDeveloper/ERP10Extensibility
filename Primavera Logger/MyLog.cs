@@ -1,12 +1,12 @@
-﻿using Primavera.Extensibility.BusinessEntities;
-using Primavera.Extensibility.Patterns;
-using StdPlatBS100;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Primavera.Extensibility.BusinessEntities;
+using Primavera.Extensibility.Patterns;
+using StdPlatBS100;
 
-namespace Primavera.Log
+namespace Primavera.Logger
 {
     /// <summary>
     /// Class that enable debug to the events.

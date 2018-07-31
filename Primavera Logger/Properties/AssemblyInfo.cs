@@ -4,11 +4,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Primavera.Logistics.Extensibility.Log")]
-[assembly: AssemblyDescription("Log extensibility events")]
+[assembly: AssemblyTitle("Primavera.Logger")]
+[assembly: AssemblyDescription("Primavera.Logger")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("PRIMAVERA BSS")]
-[assembly: AssemblyProduct("Primavera.Logistics.Extensibility.Log")]
+[assembly: AssemblyProduct("Primavera.Logger")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
