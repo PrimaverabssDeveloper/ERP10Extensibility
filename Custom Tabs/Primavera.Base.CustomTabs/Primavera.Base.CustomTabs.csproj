@@ -57,7 +57,6 @@
     </Reference>
     <Reference Include="Primavera.Platform.Extensibility.Controls">
       <HintPath>..\..\..\..\Program Files (x86)\PRIMAVERA\SG100\Apl\Primavera.Platform.Extensibility.Controls.dll</HintPath>
-      <Private>False</Private>
     </Reference>
     <Reference Include="StdBE100">
       <HintPath>..\..\..\..\Program Files (x86)\PRIMAVERA\SG100\Apl\StdBE100.dll</HintPath>
