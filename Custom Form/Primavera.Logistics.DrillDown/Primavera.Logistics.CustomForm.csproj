@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\..\..\Program Files %28x86%29\PRIMAVERA\SG100\Config\LE\Extensions\DEMO10\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -31,33 +31,28 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.Utils.v17.1">
-      <HintPath>..\..\..\..\Program Files (x86)\PRIMAVERA\SG100\Apl\DevExpress.Utils.v17.1.dll</HintPath>
-      <Private>False</Private>
+    <Reference Include="DevExpress.Utils.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\PRIMAVERA\SG100\Apl\DevExpress.Utils.v18.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraBars.v17.1">
-      <HintPath>..\..\..\..\Program Files (x86)\Common Files\PRIMAVERA\SG100\DevExpress.XtraBars.v17.1.dll</HintPath>
-      <Private>False</Private>
+    <Reference Include="DevExpress.XtraBars.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\PRIMAVERA\SG100\Apl\DevExpress.XtraBars.v18.1.dll</HintPath>
     </Reference>
     <Reference Include="ErpBS100">
-      <HintPath>..\..\..\..\Program Files (x86)\PRIMAVERA\SG100\Apl\ErpBS100.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\..\..\..\Program Files (x86)\PRIMAVERA\SG100\Apl\ErpBS100.dll</HintPath>
     </Reference>
     <Reference Include="Primavera.Extensibility.CustomForm">
-      <HintPath>..\..\..\..\Program Files (x86)\PRIMAVERA\SG100\Apl\Primavera.Extensibility.CustomForm.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\..\..\..\Program Files (x86)\PRIMAVERA\SG100\Apl\Primavera.Extensibility.CustomForm.dll</HintPath>
     </Reference>
     <Reference Include="StdBE100">
-      <HintPath>..\..\..\..\Program Files (x86)\PRIMAVERA\SG100\Apl\StdBE100.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\..\..\..\Program Files (x86)\PRIMAVERA\SG100\Apl\StdBE100.dll</HintPath>
     </Reference>
     <Reference Include="StdBESql100">
-      <HintPath>..\..\..\..\Program Files (x86)\PRIMAVERA\SG100\Apl\StdBESql100.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\..\..\..\Program Files (x86)\PRIMAVERA\SG100\Apl\StdBESql100.dll</HintPath>
     </Reference>
     <Reference Include="StdPlatBS100">
-      <HintPath>..\..\..\..\Program Files (x86)\PRIMAVERA\SG100\Apl\StdPlatBS100.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\..\..\..\Program Files (x86)\PRIMAVERA\SG100\Apl\StdPlatBS100.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

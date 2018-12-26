@@ -1,4 +1,5 @@
 ﻿using Primavera.Extensibility.CustomCode;
+using Primavera.Extensibility.Extensions;
 
 namespace Primavera.CustomNifService
 {
@@ -6,8 +7,13 @@ namespace Primavera.CustomNifService
     {
         public void GetCustomerByNIF()
         {
-            frmEntityCreator entityCreator = new frmEntityCreator();
-            entityCreator.ShowDialog();
+            using (var result = BSO.Extensibility.CreateCustomFormInstance(typeof(frmEntityCreator)))
+            {
+                if (result.IsSuccess())
+                {
+                    (result.Result as frmEntityCreator).Show();
+                }
+            }
         }
     }
 }
