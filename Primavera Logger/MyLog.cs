@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Primavera.Extensibility.BusinessEntities;
+using Primavera.Extensibility.BusinessEntities.ExtensibilityService;
 using Primavera.Extensibility.Patterns;
 using StdPlatBS100;
 
@@ -20,7 +21,7 @@ namespace Primavera.Logger
         private StdBSDialogos Dialogos { get; }
         public bool Enabled { get; set; }
 
-        #endregion
+        #endregion Members
 
         #region Constructors
 
@@ -35,9 +36,9 @@ namespace Primavera.Logger
             Dialogos = dialogos;
         }
 
-        #endregion
+        #endregion Constructors
 
-        #region Public Methods
+        #region Extensibility Engine Logging
 
         /// <summary>
         /// Logs the error.
@@ -120,6 +121,43 @@ namespace Primavera.Logger
             if (errorSeverity == ErrorSeverity.Critical)
                 if (exceptions.Any())
                     Dialogos.MostraAviso(message, StdBSTipos.IconId.PRI_Critico, detailedMessage);
+        }
+
+        #endregion Public Methods
+
+        #region #region Implementations Logging
+
+        /// <summary>
+        /// Logs only the errors caught directly in user implementations, and with access the method that triggered the exception (extensibilityException.Method)
+        /// </summary>
+        /// <param name="message">The message.</param>
+        /// <param name="extensibilityException">The exception holding the method being executed as an object</param>
+        /// <param name="errorSeverity">The error severity.</param>
+        public void LogError(string message, ExtensibilityException extensibilityException, ErrorSeverity errorSeverity = ErrorSeverity.Normal)
+        {
+            LogError(message, extensibilityException.Exception, errorSeverity);
+        }
+
+
+        /// <summary>
+        /// Logs only the messages caught directly in user implementations, and with access the method that triggered the exception (extensibilityException.Method)
+        /// </summary>
+        /// <param name="message">The message.</param>
+        /// <param name="extensibilityException">The exception holding the method being executed as an object</param>
+        public void LogMessage(string message, ExtensibilityException extensibilityException)
+        {
+            LogMessage(message, extensibilityException.Exception);
+        }
+
+        /// <summary>
+        /// Logs only the errors caught directly in user implementations, and with access the method that triggered the exception (extensibilityException.Method)
+        /// </summary>
+        /// <param name="message">The message.</param>
+        /// <param name="extensibilityExceptions">The exceptions holding the methods being executed as an object</param>
+        /// <param name="errorSeverity">The error severity.</param>
+        public void LogErrors(string message, List<ExtensibilityException> extensibilityExceptions, ErrorSeverity errorSeverity = ErrorSeverity.Normal)
+        {
+            LogErrors(message, extensibilityExceptions.Select(p => p.Exception).ToList(), errorSeverity);
         }
 
         #endregion
