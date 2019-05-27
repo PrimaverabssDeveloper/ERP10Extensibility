@@ -1,23 +1,20 @@
-# Extensibility
+# PRIMAVERA SDK
+In this repository you will find several resources and code samples on how to use SDK controls, located in PRISDK100 library, with PRIMAVERABSS ERP V10.
 
-In this repository you will find information and code samples that allows you to understand how to use PRIMAVERA extensibility technology. This technology is the Visual Basic For Applications successor.
+### What is PRIMAVERA SDK?
+The PRIMAVERA SDK100 is a library of standards and business components for the PRIMAVERA environment, which enables partners and external development teams to create ERP add-ons more quickly and easily.
 
-###  Extensibility Principle
-In a ERP, extensibility is a tool that allows you to change the application business workflow or add extra business rules to implement your unique business processes.
-The key to extensibility is that you can develop pieces of code that best fit you customer business process and create the necessary functionality for themselves.
+The use of the SDK has several advantages that stand out:
+1. Acceleration of development processes.
+2. Standardization of processes, interfaces and user experience equal to the ERP.
 
-With extensibility tools, you can:
-1. Add to a entity user-defined fields and user-defined tables.
-2. Change or add business rules at the user interface or API level.
-3. Integrate into/with external systems.
-4. Add new items to the application menu.
-5. Add a new tab to an existing window.
-
+### How to use?
+To make it possible to use it, you need to add reference to the PRISDK100.dll assembly, available in the "C:\ProgramFiles\PRIMAVERA\SG100\APL" folder.
 
 ### Contributing and Feedback
 Everyone is free to contribute to the repository.
 
-Any bugs detected in the code samples can be reported in the *Issues* section of this repository.
+Any bugs detected in the code samples can be reported in the Issues section of this repository.
 
 ### License
 Unless otherwise specified, the code samples are released under the [MIT license](https://pt.wikipedia.org/wiki/Licen%C3%A7a_MIT).
