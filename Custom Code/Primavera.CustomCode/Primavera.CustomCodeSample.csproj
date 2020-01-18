@@ -43,10 +43,15 @@
       <HintPath>packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Primavera.Extensibility.BusinessEntities, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173" />
+    <Reference Include="Primavera.Extensibility.BusinessEntities">
+      <HintPath>..\..\..\..\Program Files (x86)\PRIMAVERA\SG100\Apl\Primavera.Extensibility.BusinessEntities.dll</HintPath>
+    </Reference>
     <Reference Include="Primavera.Extensibility.CustomCode">
       <HintPath>..\..\..\..\Program Files (x86)\PRIMAVERA\SG100\Apl\Primavera.Extensibility.CustomCode.dll</HintPath>
       <Private>False</Private>
+    </Reference>
+    <Reference Include="Primavera.Extensibility.CustomForm">
+      <HintPath>..\..\..\..\Program Files (x86)\PRIMAVERA\SG100\Apl\Primavera.Extensibility.CustomForm.dll</HintPath>
     </Reference>
     <Reference Include="Primavera.Extensibility.Extensions, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -73,16 +78,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EntityCreator.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EntityCreator.Designer.cs">
-      <DependentUpon>EntityCreator.cs</DependentUpon>
-    </Compile>
     <Compile Include="NifService.cs" />
     <Compile Include="EntitySupport.cs" />
     <Compile Include="GetNif.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="EntityCreator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EntityCreator.Designer.cs">
+      <DependentUpon>EntityCreator.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config">

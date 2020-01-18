@@ -1,13 +1,13 @@
 ﻿namespace Primavera.CustomNifService
 {
-    partial class frmEntityCreator
+    partial class EntityCreator
     {
-        /// <summary>
+        /// <summary> 
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
+        /// <summary> 
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -20,14 +20,17 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Component Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
+            this.label7 = new System.Windows.Forms.Label();
+            this.cmdSearch = new System.Windows.Forms.Button();
+            this.txtnif = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtPhone = new System.Windows.Forms.TextBox();
@@ -41,11 +44,35 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtAdress = new System.Windows.Forms.TextBox();
             this.txtdescription = new System.Windows.Forms.TextBox();
-            this.cmdSearch = new System.Windows.Forms.Button();
-            this.txtnif = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(20, 15);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(226, 13);
+            this.label7.TabIndex = 30;
+            this.label7.Text = "Insert the nif in the box below and click search";
+            // 
+            // cmdSearch
+            // 
+            this.cmdSearch.Location = new System.Drawing.Point(421, 29);
+            this.cmdSearch.Name = "cmdSearch";
+            this.cmdSearch.Size = new System.Drawing.Size(75, 23);
+            this.cmdSearch.TabIndex = 32;
+            this.cmdSearch.Text = "Search";
+            this.cmdSearch.UseVisualStyleBackColor = true;
+            this.cmdSearch.Click += new System.EventHandler(this.cmdSearch_Click);
+            // 
+            // txtnif
+            // 
+            this.txtnif.Location = new System.Drawing.Point(23, 31);
+            this.txtnif.MaxLength = 9;
+            this.txtnif.Name = "txtnif";
+            this.txtnif.Size = new System.Drawing.Size(392, 20);
+            this.txtnif.TabIndex = 31;
             // 
             // groupBox1
             // 
@@ -61,10 +88,10 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtAdress);
             this.groupBox1.Controls.Add(this.txtdescription);
-            this.groupBox1.Location = new System.Drawing.Point(21, 56);
+            this.groupBox1.Location = new System.Drawing.Point(23, 57);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(473, 211);
-            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabIndex = 29;
             this.groupBox1.TabStop = false;
             // 
             // label6
@@ -163,48 +190,16 @@
             this.txtdescription.Size = new System.Drawing.Size(350, 20);
             this.txtdescription.TabIndex = 13;
             // 
-            // cmdSearch
-            // 
-            this.cmdSearch.Location = new System.Drawing.Point(419, 28);
-            this.cmdSearch.Name = "cmdSearch";
-            this.cmdSearch.Size = new System.Drawing.Size(75, 23);
-            this.cmdSearch.TabIndex = 28;
-            this.cmdSearch.Text = "Search";
-            this.cmdSearch.UseVisualStyleBackColor = true;
-            this.cmdSearch.Click += new System.EventHandler(this.cmdSearch_Click);
-            // 
-            // txtnif
-            // 
-            this.txtnif.Location = new System.Drawing.Point(21, 30);
-            this.txtnif.MaxLength = 9;
-            this.txtnif.Name = "txtnif";
-            this.txtnif.Size = new System.Drawing.Size(392, 20);
-            this.txtnif.TabIndex = 27;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(18, 14);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(226, 13);
-            this.label7.TabIndex = 25;
-            this.label7.Text = "Insert the nif in the box below and click search";
-            // 
-            // frmEntityCreator
+            // UserControl1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(515, 308);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.cmdSearch);
             this.Controls.Add(this.txtnif);
             this.Controls.Add(this.groupBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "frmEntityCreator";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Entity Creator";
+            this.Name = "UserControl1";
+            this.Size = new System.Drawing.Size(519, 290);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -214,6 +209,9 @@
 
         #endregion
 
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button cmdSearch;
+        private System.Windows.Forms.TextBox txtnif;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtPhone;
@@ -227,8 +225,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtAdress;
         private System.Windows.Forms.TextBox txtdescription;
-        private System.Windows.Forms.Button cmdSearch;
-        private System.Windows.Forms.TextBox txtnif;
-        private System.Windows.Forms.Label label7;
     }
 }

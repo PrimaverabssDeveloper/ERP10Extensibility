@@ -1,18 +1,20 @@
-﻿using Primavera.CustomNifService.RootEntity;
-using System;
+﻿using System;
+using Primavera.CustomNifService.RootEntity;
 using System.Windows.Forms;
+using Primavera.Extensibility.CustomForm;
 
 namespace Primavera.CustomNifService
 {
-    public partial class frmEntityCreator : Form
+    public partial class EntityCreator : CustomForm
     {
-        public frmEntityCreator()
+        public EntityCreator()
         {
             InitializeComponent();
         }
 
         private void cmdSearch_Click(object sender, EventArgs e)
         {
+  
             EntitySupport entity = GetNIF.GetFromNIFPT(txtnif.Text);
 
             if (entity != null && entity.result != "error")

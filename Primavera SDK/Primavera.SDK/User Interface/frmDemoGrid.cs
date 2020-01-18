@@ -9,6 +9,9 @@ namespace PrimaveraSDK
 {
     public partial class frmDemoGrid : CustomForm
     {
+        private const string GridVersion = "01.00";
+        private const string GridName = "GridDemo";
+
         // Column name consts
         // Normal columns
         private const string colModuloDesc = "ModuloDesc = ''";
@@ -60,6 +63,9 @@ namespace PrimaveraSDK
         {
             try
             {
+                //Save the current configuration.
+                priGrelha1.GravaXML();
+
                 //Ensure that resources released.
                 tiposEntidade1.Termina();
                 f41.Termina();
@@ -179,7 +185,7 @@ namespace PrimaveraSDK
             priGrelha1.AdicionaAgrupamento(priGrelha1.Cols.GetEdita(colEntidade).Number);
             priGrelha1.AdicionaAgrupamento(priGrelha1.Cols.GetEdita(colModuloDesc).Number);
 
-            // Other properties
+            // Set greid default behavior
             priGrelha1.TituloGrelha = "Demo Grid 1";
             priGrelha1.PermiteAgrupamentosUser = true;
             priGrelha1.PermiteOrdenacao = true;
@@ -189,6 +195,13 @@ namespace PrimaveraSDK
             priGrelha1.PermiteStatusBar = true;
             priGrelha1.PermiteDataFill = true;
             priGrelha1.PermiteVistas = true;
+
+            // Read the last grid layout for the current user.
+            if (!priGrelha1.LeXML("GRIDDEMO", BSO.Contexto.UtilizadorActual, GridName, GridName, GridVersion))
+            {
+                priGrelha1.FormataGrelha(true);
+            }
+
 
             priGrelha1.LimpaGrelha();
         }

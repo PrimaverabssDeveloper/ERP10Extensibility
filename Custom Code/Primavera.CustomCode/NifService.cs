@@ -7,11 +7,11 @@ namespace Primavera.CustomNifService
     {
         public void GetCustomerByNIF()
         {
-            using (var result = BSO.Extensibility.CreateCustomFormInstance(typeof(frmEntityCreator)))
+            using (var result = BSO.Extensibility.CreateCustomFormInstance(typeof(EntityCreator)))
             {
                 if (result.IsSuccess())
                 {
-                    (result.Result as frmEntityCreator).Show();
+                    (result.Result as EntityCreator).Show();
                 }
             }
         }
