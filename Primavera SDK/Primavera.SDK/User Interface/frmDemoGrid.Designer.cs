@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            StdBase100.StdBETipoEntidade stdBETipoEntidade4 = new StdBase100.StdBETipoEntidade();
+            StdBase100.StdBETipoEntidade stdBETipoEntidade1 = new StdBase100.StdBETipoEntidade();
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonLoadGrid = new System.Windows.Forms.Button();
             this.f41 = new PRISDK100.F4();
@@ -109,18 +109,18 @@
             // 
             this.tiposEntidade1.Activo = true;
             this.tiposEntidade1.Caption = "Tipo de Entidade:";
-            stdBETipoEntidade4.AcedeOperacao = false;
-            stdBETipoEntidade4.Audit = "";
-            stdBETipoEntidade4.Campo_Chave = "";
-            stdBETipoEntidade4.Categoria = "";
-            stdBETipoEntidade4.Descricao = "";
-            stdBETipoEntidade4.DescricaoPlural = "";
-            stdBETipoEntidade4.Modulo = "";
-            stdBETipoEntidade4.Natureza = "";
-            stdBETipoEntidade4.Tabela = "";
-            stdBETipoEntidade4.TipoEntidade = "";
-            stdBETipoEntidade4.Visivel = false;
-            this.tiposEntidade1.Contexto = stdBETipoEntidade4;
+            stdBETipoEntidade1.AcedeOperacao = false;
+            stdBETipoEntidade1.Audit = "";
+            stdBETipoEntidade1.Campo_Chave = "";
+            stdBETipoEntidade1.Categoria = "";
+            stdBETipoEntidade1.Descricao = "";
+            stdBETipoEntidade1.DescricaoPlural = "";
+            stdBETipoEntidade1.Modulo = "";
+            stdBETipoEntidade1.Natureza = "";
+            stdBETipoEntidade1.Tabela = "";
+            stdBETipoEntidade1.TipoEntidade = "";
+            stdBETipoEntidade1.Visivel = false;
+            this.tiposEntidade1.Contexto = stdBETipoEntidade1;
             this.tiposEntidade1.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.tiposEntidade1.LarguraLink = 0;
             this.tiposEntidade1.Location = new System.Drawing.Point(11, 11);
@@ -146,11 +146,12 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 44);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(759, 328);
+            this.panel2.Size = new System.Drawing.Size(759, 367);
             this.panel2.TabIndex = 6;
             // 
             // priGrelha1
             // 
+            this.priGrelha1.BackColor = System.Drawing.Color.White;
             this.priGrelha1.BandaMenuContexto = "";
             this.priGrelha1.BotaoConfigurarActiveBar = true;
             this.priGrelha1.BotaoProcurarActiveBar = false;
@@ -166,7 +167,7 @@
             this.priGrelha1.NumLinhasCabecalho = 1;
             this.priGrelha1.OrientacaoMapa = PRISDK100.clsSDKTypes.OrientacaoImpressao.oiDefault;
             this.priGrelha1.ParentFormModal = false;
-            this.priGrelha1.PermiteActiveBar = false;
+            this.priGrelha1.PermiteActiveBar = true;
             this.priGrelha1.PermiteActualizar = true;
             this.priGrelha1.PermiteAgrupamentosUser = true;
             this.priGrelha1.PermiteConfigurarDetalhes = false;
@@ -183,7 +184,7 @@
             this.priGrelha1.PermiteStatusBar = true;
             this.priGrelha1.PermiteVistas = true;
             this.priGrelha1.PosicionaColunaSeguinte = true;
-            this.priGrelha1.Size = new System.Drawing.Size(759, 328);
+            this.priGrelha1.Size = new System.Drawing.Size(759, 367);
             this.priGrelha1.TabIndex = 5;
             this.priGrelha1.TituloGrelha = "";
             this.priGrelha1.TituloMapa = "";
@@ -198,21 +199,18 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(759, 372);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.MinimumSize = new System.Drawing.Size(759, 411);
             this.Name = "frmDemoGrid";
+            this.Size = new System.Drawing.Size(759, 411);
             this.Text = "Pendentes";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmDemoGrid_FormClosed);
             this.Load += new System.EventHandler(this.frmDemoGrid_Load);
-            this.Controls.SetChildIndex(this.panel1, 0);
-            this.Controls.SetChildIndex(this.panel2, 0);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.priGrelha1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

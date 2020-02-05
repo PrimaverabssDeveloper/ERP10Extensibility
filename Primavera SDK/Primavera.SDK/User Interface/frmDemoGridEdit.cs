@@ -734,7 +734,7 @@ namespace PrimaveraSDK
             // Artigos
             if (col == priGrelha1.Cols.GetEdita(colArtigo).Number)
             {
-                PSO.AbreLista(1, ConstantesPrimavera100.Categorias.Artigo, "Artigo", this, priGrelha1.Grelha, "mnuTabArtigo", row, col, false, "(ArtigoAnulado = 0)");
+                PSO.AbreLista(1, ConstantesPrimavera100.Categorias.Artigo, "Artigo", this.ParentForm, priGrelha1.Grelha, "mnuTabArtigo", row, col, false, "(ArtigoAnulado = 0)");
             }
             else
             {
@@ -745,7 +745,7 @@ namespace PrimaveraSDK
                     // Lotes
                     if (col == priGrelha1.Cols.GetEdita(colLote).Number)
                     {
-                        PSO.AbreLista(1, ConstantesPrimavera100.Categorias.ArtigoLote, "Lote", this, priGrelha1.Grelha, ConstantesPrimavera100.Audit.TAB_ARTIGOS, row, col, false, string.Format("([ARTIGOLOTE].Artigo = '{0}')", artigo));
+                        PSO.AbreLista(1, ConstantesPrimavera100.Categorias.ArtigoLote, "Lote", this.ParentForm, priGrelha1.Grelha, ConstantesPrimavera100.Audit.TAB_ARTIGOS, row, col, false, string.Format("([ARTIGOLOTE].Artigo = '{0}')", artigo));
                     }
                     
                     // Entidade
@@ -773,26 +773,26 @@ namespace PrimaveraSDK
                             default:
                                 break;
                         }
-                        PSO.AbreLista(1, categoria, campo, this, priGrelha1.Grelha, audit, row, col, false, where);
+                        PSO.AbreLista(1, categoria, campo, this.ParentForm, priGrelha1.Grelha, audit, row, col, false, where);
                     }
 
                     // Armazém
                     if (col == priGrelha1.Cols.GetEdita(colArmazem).Number)
                     {
-                        PSO.AbreLista(1, ConstantesPrimavera100.Categorias.Armazem, "Armazem", this, priGrelha1.Grelha, ConstantesPrimavera100.Audit.TAB_ARMAZENS, row, col, false);
+                        PSO.AbreLista(1, ConstantesPrimavera100.Categorias.Armazem, "Armazem", this.ParentForm, priGrelha1.Grelha, ConstantesPrimavera100.Audit.TAB_ARMAZENS, row, col, false);
                     }
 
                     // Localização
                     if (col == priGrelha1.Cols.GetEdita(colLocalizacao).Number)
                     {
                         string armazem = PSO.Utils.FStr(priGrelha1.GetGRID_GetValorCelula(row, colArmazem));
-                        PSO.AbreLista(1, ConstantesPrimavera100.Categorias.ArmazemLocalizacoes, "Localizacao", this, priGrelha1.Grelha, ConstantesPrimavera100.Audit.TAB_ARMAZEMLOCALIZACAO, row, col, false, string.Format("(Armazem = '{0}')", armazem));
+                        PSO.AbreLista(1, ConstantesPrimavera100.Categorias.ArmazemLocalizacoes, "Localizacao", this.ParentForm, priGrelha1.Grelha, ConstantesPrimavera100.Audit.TAB_ARMAZEMLOCALIZACAO, row, col, false, string.Format("(Armazem = '{0}')", armazem));
                     }
 
                     // Estado
                     if (col == priGrelha1.Cols.GetEdita(colEstado).Number)
                     {
-                        PSO.AbreLista(1, ConstantesPrimavera100.Categorias.EstadosInventario, "Estado", this, priGrelha1.Grelha, ConstantesPrimavera100.Audit.TAB_ESTADOS_INVENTARIO, row, col, false, "Disponivel = 0 AND EstadoReserva = 0 AND Previsto = 0 AND Transito = 0");
+                        PSO.AbreLista(1, ConstantesPrimavera100.Categorias.EstadosInventario, "Estado", this.ParentForm, priGrelha1.Grelha, ConstantesPrimavera100.Audit.TAB_ESTADOS_INVENTARIO, row, col, false, "Disponivel = 0 AND EstadoReserva = 0 AND Previsto = 0 AND Transito = 0");
                     }
                 }
             }

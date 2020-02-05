@@ -126,6 +126,15 @@ namespace PrimaveraSDK
                 case "MNUSTDDRILLDOWN":
                     ExecuteDrillDown();
                     break;
+                case "MNUCRIAENTIDADE":
+                    PSO.Dialogos.MostraMensagem(
+                            StdPlatBS100.StdBSTipos.TipoMsg.PRI_SimplesOk, "Create e new entity");
+                    break;
+                case "MNUEDITARENTIDADE":
+                    PSO.Dialogos.MostraMensagem(
+                        StdPlatBS100.StdBSTipos.TipoMsg.PRI_SimplesOk, 
+                        PSO.Utils.FStr(priGrelha1.GetGRID_GetValorCelula(priGrelha1.Grelha.ActiveRow, colEntidade)));
+                    break;
                 default:
                     break;
             }
@@ -163,6 +172,13 @@ namespace PrimaveraSDK
             priGrelha1.AddColAgrupa();
             priGrelha1.AddColAgrupa();
 
+            // Add a custom comand to the activebar.
+            priGrelha1.AddOpcaoActiveBar(0, "mnuCriaEntidade", "Novo", null,
+                    StdBrandingInfo100.Properties.RibbonResourcesVND.novo_16);
+
+            priGrelha1.AddOpcaoActiveBar(1, "mnuEditarEntidade", "Editar", null,
+                    StdBrandingInfo100.Properties.RibbonResourcesVND.clientes_16);
+
             // Normal columns
             priGrelha1.AddColKey(colModuloDesc, FpCellType.CellTypeEdit, "Módulo", 10, true, strCamposBaseDados: colModulo);
             priGrelha1.AddColKey(colEntidade, FpCellType.CellTypeEdit, "Entidade", 24, true, strCamposBaseDados: colEntidade, blnDrillDown: true);
@@ -173,6 +189,7 @@ namespace PrimaveraSDK
             priGrelha1.AddColKey(colDataVenc, FpCellType.CellTypeDate, "Data Venc.", 8, true, strCamposBaseDados: colDataVenc);
             priGrelha1.AddColKey(colValorTotal, FpCellType.CellTypeFloat, "Valor Total", 8, true, strCamposBaseDados: colValorTotal, blnColunaTotalizador: true);
             priGrelha1.AddColKey(colValorPendente, FpCellType.CellTypeFloat, "Valor Pendente", 8, true, strCamposBaseDados: colValorPendente, blnColunaTotalizador: true);
+            
             // Calculeted column
             priGrelha1.AddColKey(colModulo, FpCellType.CellTypeEdit, "Modulo", 2, true, false, strCamposBaseDados: colModulo);
             priGrelha1.AddColKey(colDiasAtraso, FpCellType.CellTypeInteger, "Dias Atraso", 8, true, strCamposBaseDados: colDiasAtraso, blnColunaTotalizador: true);
