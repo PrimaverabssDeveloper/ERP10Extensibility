@@ -7,9 +7,9 @@ using Primavera.Extensibility.BusinessEntities;
 using Primavera.Extensibility.Base.Editors;
 using Primavera.Extensibility.BusinessEntities.ExtensibilityService.EventArgs;
 
-namespace DEMO.Base
+namespace Primavera.SIFitofarmaceuticos.Base
 {
-    public class UiFichaClientes : FichaClientes
+    public class UiFichaArtigos : FichaArtigos
     {
         public override void AntesDeGravar(ref bool Cancel, ExtensibilityEventArgs e)
         {
@@ -17,11 +17,16 @@ namespace DEMO.Base
 
             try
             {
-                if ((bool)this.Cliente.CamposUtil["CDU_OperadorFitofarmaceuticos"].Valor)
+                if ((bool)this.Artigo.CamposUtil["CDU_Fitofarmaceutico"].Valor)
                 {
-                    if (string.IsNullOrEmpty(this.Cliente.CamposUtil["CDU_FitofarmaceuticoNumero"].Valor.ToString()))
+                    if (string.IsNullOrEmpty(this.Artigo.CamposUtil["CDU_FitofarmaceuticoNumAut"].Valor.ToString()))
                     {
-                        throw new Exception("O número de autorização ou de aplicador é obrigatório nos operadores de fitofarmacêuticos.");
+                        throw new Exception("O número de autorização é obrigatório nos produtos fitofarmacêuticos.");
+                    }
+
+                    if (!this.Artigo.TrataLotes)
+                    {
+                        throw new Exception("O tratamento de lotes é obrigatório nos produtos fitofarmacêuticos.");
                     }
                 }
             }

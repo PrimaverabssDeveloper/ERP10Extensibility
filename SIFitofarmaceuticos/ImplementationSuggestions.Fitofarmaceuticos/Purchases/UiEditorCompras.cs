@@ -8,7 +8,7 @@ using Primavera.Extensibility.BusinessEntities.ExtensibilityService.EventArgs;
 using Primavera.Extensibility.Purchases.Editors;
 using StdBE100;
 
-namespace DEMO.Purchases
+namespace Primavera.SIFitofarmaceuticos.Purchases
 {
     public class UiEditorCompras : EditorCompras
     {

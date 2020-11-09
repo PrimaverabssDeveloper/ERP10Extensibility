@@ -7,7 +7,7 @@ using Primavera.Extensibility.BusinessEntities;
 using Primavera.Extensibility.BusinessEntities.ExtensibilityService.EventArgs;
 using Primavera.Extensibility.Sales.Editors;
 
-namespace DEMO.Sales
+namespace Primavera.SIFitofarmaceuticos.Sales
 {
     public class UiEditorVendas : EditorVendas
     {
