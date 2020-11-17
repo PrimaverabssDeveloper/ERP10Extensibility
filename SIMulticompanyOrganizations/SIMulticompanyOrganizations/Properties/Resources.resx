@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="IMG_ImportDocuments" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\img_importdocuments.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UPG_1" xml:space="preserve">
+    <value>/* SUGIMPL_OME Data Model */
+--&gt; Version 1
+--&gt; Nuno Queirós
+--&gt; 19.09.2020
+
+
+/**********************************************
+			CDUs
+**********************************************/
+IF NOT EXISTS (SELECT 1 FROM sys.columns WHERE Name = N'CDU_ArtigoGrupo' AND Object_ID = Object_ID(N'dbo.Artigo')) ALTER TABLE Artigo ADD CDU_ArtigoGrupo BIT NOT NULL DEFAULT 0
+IF NOT EXISTS (SELECT 1 FROM sys.columns WHERE Name = N'CDU_Exportado' AND Object_ID = Object_ID(N'dbo.CabecCompras')) ALTER TABLE CabecCompras ADD CDU_Exportado BIT NOT NULL DEFAULT 0
+IF NOT EXISTS (SELECT 1 FROM sys.columns WHERE Name = N'CDU_Exportado' AND Object_ID = Object_ID(N'dbo.CabecDoc')) ALTER TABLE CabecDoc ADD CDU_Exportado BIT NOT NULL DEFAULT 0
+IF NOT EXISTS (SELECT 1 FROM sys.columns WHERE Name = N'CDU_Exportado' AND Object_ID = Object_ID(N'dbo.CabecInternos')) ALTER TABLE CabecInternos ADD CDU_Exportado BIT NOT NULL DEFAULT 0
+IF NOT EXISTS (SELECT 1 FROM sys.columns WHERE Name = N'CDU_EntidadeGrupo' AND Object_ID = Object_ID(N'dbo.Clientes')) ALTER TABLE Clientes ADD CDU_EntidadeGrupo BIT NOT NULL DEFAULT 0
+IF NOT EXISTS (SELECT 1 FROM sys.columns WHERE Name = N'CDU_EntidadeGrupo' AND Object_ID = Object_ID(N'dbo.EntidadesExternas')) ALTER TABLE EntidadesExternas ADD CDU_EntidadeGrupo BIT NOT NULL DEFAULT 0
+IF NOT EXISTS (SELECT 1 FROM sys.columns WHERE Name = N'CDU_EntidadeGrupo' AND Object_ID = Object_ID(N'dbo.Fornecedores')) ALTER TABLE Fornecedores ADD CDU_EntidadeGrupo BIT NOT NULL DEFAULT 0
+IF NOT EXISTS (SELECT 1 FROM sys.columns WHERE Name = N'CDU_ExportaGrupo' AND Object_ID = Object_ID(N'dbo.DocumentosCompra')) ALTER TABLE DocumentosCompra ADD CDU_ExportaGrupo BIT NOT NULL DEFAULT 0
+IF NOT EXISTS (SELECT 1 FROM sys.columns WHERE Name = N'CDU_DocDestino' AND Object_ID = Object_ID(N'dbo.DocumentosCompra')) ALTER TABLE DocumentosCompra ADD CDU_DocDestino NVARCHAR(3) NULL
+IF NOT EXISTS (SELECT 1 FROM sys.columns WHERE Name = N'CDU_ExportaGrupo' AND Object_ID = Object_ID(N'dbo.DocumentosInternos')) ALTER TABLE DocumentosInternos ADD CDU_ExportaGrupo BIT NOT NULL DEFAULT 0
+IF NOT EXISTS (SELECT 1 FROM sys.columns WHERE Name = N'CDU_DocDestino' AND Object_ID = Object_ID(N'dbo.DocumentosInternos')) ALTER TABLE DocumentosInternos ADD CDU_DocDestino NVARCHAR(3) NULL
+IF NOT EXISTS (SELECT 1 FROM sys.columns WHERE Name = N'CDU_ExportaGrupo' AND Object_ID = Object_ID(N'dbo.DocumentosVenda')) ALTER TABLE DocumentosVenda ADD CDU_ExportaGrupo BIT NOT NULL DEFAULT 0
+IF NOT EXISTS (SELECT 1 FROM sys.columns WHERE Name = N'CDU_DocDestino' AND Object_ID = Object_ID(N'dbo.DocumentosVenda')) ALTER TABLE DocumentosVenda ADD CDU_DocDestino NVARCHAR(3) NULL
+
+
+/**********************************************
+			StdCamposVar
+**********************************************/
+IF NOT EXISTS (SELECT * FROM StdCamposVar WHERE Tabela = 'Artigo' and Campo = 'CDU_ArtigoGrupo') 
+	INSERT INTO StdCamposVar ([Tabela], [Campo], [Descricao], [Texto], [Visivel], [Ordem], [Pagina], [ValorDefeito], [Query], [ExportarTTE], [DadosSensiveis]) VALUES ('Artigo',			'CDU_ArtigoGrupo',		'Artigo do Grupo',				'Artigo do Grupo',			1, (SELECT count(*) + 1 FROM StdCamposVar WHERE Tabela = 'Artigo'),				NULL, 0, NULL, 0, 0)
+IF NOT EXISTS (SELECT * FROM StdCamposVar WHERE Tabela = 'CabecCompras' and Campo = 'CDU_Exportado') 
+	INSERT INTO StdCamposVar ([Tabela], [Campo], [Descricao], [Texto], [Visivel], [Ordem], [Pagina], [ValorDefeito], [Query], [ExportarTTE], [DadosSensiveis]) VALUES ('CabecCompras',		'CDU_Exportado',		'Doc. exportado para Grupo',	'Doc. export. - Grupo',		1, (SELECT count(*) + 1 FROM StdCamposVar WHERE Tabela = 'CabecCompras'),		NULL, 0, NULL, 0, 0)
+IF NOT EXISTS (SELECT * FROM StdCamposVar WHERE Tabela = 'CabecDoc' and Campo = 'CDU_Exportado') 
+	INSERT INTO StdCamposVar ([Tabela], [Campo], [Descricao], [Texto], [Visivel], [Ordem], [Pagina], [ValorDefeito], [Query], [ExportarTTE], [DadosSensiveis]) VALUES ('CabecDoc',			'CDU_Exportado',		'Doc. exportado para Grupo',	'Doc. export. - Grupo',		1, (SELECT count(*) + 1 FROM StdCamposVar WHERE Tabela = 'CabecDoc'),			NULL, 0, NULL, 0, 0)
+IF NOT EXISTS (SELECT * FROM StdCamposVar WHERE Tabela = 'CabecInternos' and Campo = 'CDU_Exportado') 
+	INSERT INTO StdCamposVar ([Tabela], [Campo], [Descricao], [Texto], [Visivel], [Ordem], [Pagina], [ValorDefeito], [Query], [ExportarTTE], [DadosSensiveis]) VALUES ('CabecInternos',		'CDU_Exportado',		'Doc. exportado para Grupo',	'Doc. export. - Grupo',		1, (SELECT count(*) + 1 FROM StdCamposVar WHERE Tabela = 'CabecInternos'),		NULL, 0, NULL, 0, 0)
+IF NOT EXISTS (SELECT * FROM StdCamposVar WHERE Tabela = 'Clientes' and Campo = 'CDU_EntidadeGrupo') 
+	INSERT INTO StdCamposVar ([Tabela], [Campo], [Descricao], [Texto], [Visivel], [Ordem], [Pagina], [ValorDefeito], [Query], [ExportarTTE], [DadosSensiveis]) VALUES ('Clientes',			'CDU_EntidadeGrupo',	'Entidade do Grupo',			'Entidade do Grupo',		1, (SELECT count(*) + 1 FROM StdCamposVar WHERE Tabela = 'Clientes'),			NULL, 0, NULL, 0, 0)
+IF NOT EXISTS (SELECT * FROM StdCamposVar WHERE Tabela = 'EntidadesExternas' and Campo = 'CDU_EntidadeGrupo') 
+	INSERT INTO StdCamposVar ([Tabela], [Campo], [Descricao], [Texto], [Visivel], [Ordem], [Pagina], [ValorDefeito], [Query], [ExportarTTE], [DadosSensiveis]) VALUES ('EntidadesExternas',	'CDU_EntidadeGrupo',	'Entidade do Grupo',			'Entidade do Grupo',		1, (SELECT count(*) + 1 FROM StdCamposVar WHERE Tabela = 'EntidadesExternas'),	NULL, 0, NULL, 0, 0)
+IF NOT EXISTS (SELECT * FROM StdCamposVar WHERE Tabela = 'Fornecedores' and Campo = 'CDU_EntidadeGrupo') 
+	INSERT INTO StdCamposVar ([Tabela], [Campo], [Descricao], [Texto], [Visivel], [Ordem], [Pagina], [ValorDefeito], [Query], [ExportarTTE], [DadosSensiveis]) VALUES ('Fornecedores',		'CDU_EntidadeGrupo',	'Entidade do Grupo',			'Entidade do Grupo',		1, (SELECT count(*) + 1 FROM StdCamposVar WHERE Tabela = 'Fornecedores'),		NULL, 0, NULL, 0, 0)
+IF NOT EXISTS (SELECT * FROM StdCamposVar WHERE Tabela = 'DocumentosCompra' and Campo = 'CDU_ExportaGrupo') 
+	INSERT INTO StdCamposVar ([Tabela], [Campo], [Descricao], [Texto], [Visivel], [Ordem], [Pagina], [ValorDefeito], [Query], [ExportarTTE], [DadosSensiveis]) VALUES ('DocumentosCompra',	'CDU_ExportaGrupo',		'Exporta Doc. para Grupo',		'Exporta Doc. Grupo',		1, (SELECT count(*) + 1 FROM StdCamposVar WHERE Tabela = 'DocumentosCompra'),	NULL, 0, NULL, 0, 0)
+IF NOT EXISTS (SELECT * FROM StdCamposVar WHERE Tabela = 'DocumentosCompra' and Campo = 'CDU_DocDestino') 
+	INSERT INTO StdCamposVar ([Tabela], [Campo], [Descricao], [Texto], [Visivel], [Ordem], [Pagina], [ValorDefeito], [Query], [ExportarTTE], [DadosSensiveis]) VALUES ('DocumentosCompra',	'CDU_DocDestino',		'Documento destino no Grupo',	'Documento dest.Grupo',		1, (SELECT count(*) + 1 FROM StdCamposVar WHERE Tabela = 'DocumentosCompra'),	NULL, '', NULL, 0, 0)
+IF NOT EXISTS (SELECT * FROM StdCamposVar WHERE Tabela = 'DocumentosInternos' and Campo = 'CDU_ExportaGrupo') 
+	INSERT INTO StdCamposVar ([Tabela], [Campo], [Descricao], [Texto], [Visivel], [Ordem], [Pagina], [ValorDefeito], [Query], [ExportarTTE], [DadosSensiveis]) VALUES ('DocumentosInternos','CDU_ExportaGrupo',		'Exporta Doc. para Grupo',		'Exporta Doc. Grupo',		1, (SELECT count(*) + 1 FROM StdCamposVar WHERE Tabela = 'DocumentosInternos'),	NULL, 0, NULL, 0, 0)
+IF NOT EXISTS (SELECT * FROM StdCamposVar WHERE Tabela = 'DocumentosInternos' and Campo = 'CDU_DocDestino') 
+	INSERT INTO StdCamposVar ([Tabela], [Campo], [Descricao], [Texto], [Visivel], [Ordem], [Pagina], [ValorDefeito], [Query], [ExportarTTE], [DadosSensiveis]) VALUES ('DocumentosInternos','CDU_DocDestino',		'Documento destino no Grupo',	'Documento dest.Grupo',		1, (SELECT count(*) + 1 FROM StdCamposVar WHERE Tabela = 'DocumentosInternos'),	NULL, '', NULL, 0, 0)
+IF NOT EXISTS (SELECT * FROM StdCamposVar WHERE Tabela = 'DocumentosVenda' and Campo = 'CDU_ExportaGrupo') 
+	INSERT INTO StdCamposVar ([Tabela], [Campo], [Descricao], [Texto], [Visivel], [Ordem], [Pagina], [ValorDefeito], [Query], [ExportarTTE], [DadosSensiveis]) VALUES ('DocumentosVenda',	'CDU_ExportaGrupo',		'Exporta Doc. para Grupo',		'Exporta Doc. Grupo',		1, (SELECT count(*) + 1 FROM StdCamposVar WHERE Tabela = 'DocumentosVenda'),	NULL, 0, NULL, 0, 0)
+IF NOT EXISTS (SELECT * FROM StdCamposVar WHERE Tabela = 'DocumentosVenda' and Campo = 'CDU_DocDestino') 
+	INSERT INTO StdCamposVar ([Tabela], [Campo], [Descricao], [Texto], [Visivel], [Ordem], [Pagina], [ValorDefeito], [Query], [ExportarTTE], [DadosSensiveis]) VALUES ('DocumentosVenda',	'CDU_DocDestino',		'Documento destino no Grupo',	'Documento dest.Grupo',		1, (SELECT count(*) + 1 FROM StdCamposVar WHERE Tabela = 'DocumentosVenda'),	NULL, '', NULL, 0, 0)</value>
+    <comment>Upgrade data model to version 1</comment>
+  </data>
+</root>
