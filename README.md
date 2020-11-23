@@ -22,19 +22,19 @@ This repository is organized in two sections, in the section **samples** you wil
 | Sample                                 | Descripition     |
 | :------------------------------------- | :--------------- |
 | [Custom Code](samples/Custom%20Code) | Uses the https://www.nif.pt/ API to create new entities. |
-| [Custom Events](samples%2FCustom%2520Events%2FREADME.md) | Add to the sales invoice a zip code format validation and exports the document in to PDF. |
-| [Custom Form](samples%2FCustom%2520Form%2FREADME.md) | List all sales document and allows perform drill-down to the source document and to the entity. |
-| [Custom Tab](samples%2FCustom%2520Tabs%2FReadme.md) | Add a custom tab to customer entity. A Tab with goole maps integration. |
-| [Custom Ribbon](samples%2FCustom%2520Ribbon%2FREADME.md) | Add's a new TAB on the ERP Ribbon. |
-| [Primavera Logger ](samples%2FPrimavera%2520Logger%2FREADME.md)| Log all the errors and events of your extensibility project. |
-| [Primavera SDK](samples%2FPrimavera%2520SDK%2FREADME.md) | Learn how to use the SDK PriGrid and F4 controls. |
-| [Primavera.RelatedInfo](samples%2FPrimavera.RelatedInfo%2Freadme.md) | Adds a new control to the invoice context panel to show the customer pending documents.|
+| [Custom Events](samples/Custom%20Events) | Add to the sales invoice a zip code format validation and exports the document in to PDF. |
+| [Custom Form](samples/Custom%20Form) | List all sales document and allows perform drill-down to the source document and to the entity. |
+| [Custom Tab](samples/Custom%20Tabs) | Add a custom tab to customer entity. A Tab with goole maps integration. |
+| [Custom Ribbon](samples/Custom%20Ribbon) | Add's a new TAB on the ERP Ribbon. |
+| [Primavera Logger ](samples/Primavera%20Logger)| Log all the errors and events of your extensibility project. |
+| [Primavera SDK](samples/Primavera%20SDK) | Learn how to use the SDK PriGrid and F4 controls. |
+| [Primavera.RelatedInfo](samples/Primavera.RelatedInfo) | Adds a new control to the invoice context panel to show the customer pending documents.|
 
 ### In Implementation Section
 
 | Sample                                 | Descripition     |
 | :------------------------------------- | :--------------- |
-| [Fito Farmaceiticos](Implementation%2FSIFitofarmaceuticos%2FReadme.md) | Implementation Suggetion that handles the "Fitofarmacêuticos" portuguese legal requirements in a PRIMAVERA ERP V10 environment. |
+| [Fito Farmaceiticos](Implementation/SIFitofarmaceuticos) | Implementation Suggetion that handles the "Fitofarmacêuticos" portuguese legal requirements in a PRIMAVERA ERP V10 environment. |
 
 ## Contributing and Feedback
 
