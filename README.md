@@ -21,7 +21,7 @@ This repository is organized in two sections, in the section **samples** you wil
 
 | Sample                                 | Descripition     |
 | :------------------------------------- | :--------------- |
-| [Custom Code](samples%2FCustom%2520Code%2FREADME.md) | Uses the https://www.nif.pt/ API to create new entities. |
+| [Custom Code](samples/Custom%20Code) | Uses the https://www.nif.pt/ API to create new entities. |
 | [Custom Events](samples%2FCustom%2520Events%2FREADME.md) | Add to the sales invoice a zip code format validation and exports the document in to PDF. |
 | [Custom Form](samples%2FCustom%2520Form%2FREADME.md) | List all sales document and allows perform drill-down to the source document and to the entity. |
 | [Custom Tab](samples%2FCustom%2520Tabs%2FReadme.md) | Add a custom tab to customer entity. A Tab with goole maps integration. |
