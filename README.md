@@ -15,7 +15,7 @@ With extensibility tools, you can:
 
 ## Repository Organization
 
-This repository is organized in two sections, in the section **samples** you will found code samples that will help you understand how to use  the extensibility tecnologia. In the section **Implementation** find real case solution to specialized market  areas.
+This repository is organized in two sections, in the section **samples** you will found code samples that will help you understand how to use  the extensibility technology. In the section **Implementation** find real case solution to specialized market  areas.
 
 ### In Samples Section
 
