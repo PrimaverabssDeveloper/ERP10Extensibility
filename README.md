@@ -35,6 +35,7 @@ This repository is organized in two sections, in the section **samples** you wil
 | Sample                                 | Descripition     |
 | :------------------------------------- | :--------------- |
 | [Fito Farmaceiticos](Implementation/SIFitofarmaceuticos) | Implementation Suggetion that handles the "Fitofarmacêuticos" portuguese legal requirements in a PRIMAVERA ERP V10 environment. |
+| [ECHO Sample Topic](Implementation/DevelopersNetworkTopic) | Implementation Suggetion of a sample topic for the ECHO bot (10.10 SR1 version). |
 
 ## Contributing and Feedback
 
