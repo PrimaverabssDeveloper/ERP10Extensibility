@@ -23,11 +23,11 @@ VALUES('TaskExecutionExample', 'Task_ExecutionExample', @TopicId, 1,
 
 -- Portuguese
 INSERT INTO Bot.BotStringTable(ResourceId, [Language], [Text], CreatedBy, ModifiedBy)
-VALUES('Topic_DevelopersNetwork', 'pt-pt', 'Tópico de Template Developers Network', 'MyUser', 'MyUser')
+VALUES('Topic_DevelopersNetwork', 'pt', 'Tópico de Template Developers Network', 'MyUser', 'MyUser')
 INSERT INTO Bot.BotStringTable(ResourceId, [Language], [Text], CreatedBy, ModifiedBy)
-VALUES('Task_ExecutionExample', 'pt-pt', 'Exemplo de execução', 'MyUser', 'MyUser')
+VALUES('Task_ExecutionExample', 'pt', 'Exemplo de execução', 'MyUser', 'MyUser')
 -- English
 INSERT INTO Bot.BotStringTable(ResourceId, [Language], [Text], CreatedBy, ModifiedBy)
-VALUES('Topic_DevelopersNetwork', 'en-en', 'Developers Network Template Topic', 'MyUser', 'MyUser')
+VALUES('Topic_DevelopersNetwork', 'en', 'Developers Network Template Topic', 'MyUser', 'MyUser')
 INSERT INTO Bot.BotStringTable(ResourceId, [Language], [Text], CreatedBy, ModifiedBy)
-VALUES('Task_ExecutionExample', 'en-en', ' Execution example', 'MyUser', 'MyUser')
+VALUES('Task_ExecutionExample', 'en', ' Execution example', 'MyUser', 'MyUser')

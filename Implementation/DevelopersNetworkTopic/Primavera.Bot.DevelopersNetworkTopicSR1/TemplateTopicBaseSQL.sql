@@ -156,7 +156,7 @@ VALUES('GenerateTemplateMessages', 'Task_GenerateTemplateMessages', @TopicId, 1,
 |             ResourceId             |             Language             |             Text             |       CreatedBy       |       ModifiedBy       |
 +------------------------------------+----------------------------------+------------------------------+-----------------------+------------------------+
 | Unique identifier for the resource | Language in which the text will  | The translated text based on | User that created the | User that modified the |
-| (same one set in "BotTopics" and   | be translated (pt-pt, en-en)		| language                     | translation           | translation            |
+| (same one set in "BotTopics" and   | be translated (pt, en)			| language                     | translation           | translation            |
 | "BotTasks" tables)                 |                                  |                              |                       |                        |
 +------------------------------------+----------------------------------+------------------------------+-----------------------+------------------------+
 | SQL managed/auto generated columns																						   |
@@ -168,11 +168,11 @@ VALUES('GenerateTemplateMessages', 'Task_GenerateTemplateMessages', @TopicId, 1,
 */
 -- Portuguese
 INSERT INTO Bot.BotStringTable(ResourceId, [Language], [Text], CreatedBy, ModifiedBy)
-VALUES('Topic_DevelopersNetwork', 'pt-pt', 'Tópico de Template Developers Network', 'MyUser', 'MyUser')
+VALUES('Topic_DevelopersNetwork', 'pt', 'Tópico de Template Developers Network', 'MyUser', 'MyUser')
 INSERT INTO Bot.BotStringTable(ResourceId, [Language], [Text], CreatedBy, ModifiedBy)
-VALUES('Task_GenerateTemplateMessages', 'pt-pt', 'Geração de mensagens exemplo', 'MyUser', 'MyUser')
+VALUES('Task_GenerateTemplateMessages', 'pt', 'Geração de mensagens exemplo', 'MyUser', 'MyUser')
 -- English
 INSERT INTO Bot.BotStringTable(ResourceId, [Language], [Text], CreatedBy, ModifiedBy)
-VALUES('Topic_DevelopersNetwork', 'en-en', 'Developers Network Template Topic', 'MyUser', 'MyUser')
+VALUES('Topic_DevelopersNetwork', 'en', 'Developers Network Template Topic', 'MyUser', 'MyUser')
 INSERT INTO Bot.BotStringTable(ResourceId, [Language], [Text], CreatedBy, ModifiedBy)
-VALUES('Task_GenerateTemplateMessages', 'en-en', ' Generation of example messages', 'MyUser', 'MyUser')
+VALUES('Task_GenerateTemplateMessages', 'en', ' Generation of example messages', 'MyUser', 'MyUser')
