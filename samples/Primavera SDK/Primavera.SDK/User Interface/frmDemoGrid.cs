@@ -172,11 +172,20 @@ namespace PrimaveraSDK
             priGrelha1.AddColAgrupa();
             priGrelha1.AddColAgrupa();
 
-            // Add a custom comand to the activebar.
+            // Add a custom comand to Context Menu
             priGrelha1.AddOpcaoActiveBar(0, "mnuCriaEntidade", "Novo", null,
-                    StdBrandingInfo100.Properties.RibbonResourcesVND.novo_16);
+                    StdBrandingInfo100.Properties.RibbonResourcesVND.novo_16,
+                    strBandaDestino: "mnuContexto");
 
             priGrelha1.AddOpcaoActiveBar(1, "mnuEditarEntidade", "Editar", null,
+                    StdBrandingInfo100.Properties.RibbonResourcesVND.clientes_16,
+                    strBandaDestino: "mnuContexto");
+
+            // Add a custom comand to active bar.
+            priGrelha1.AddOpcaoActiveBar(0, "mnuCriaEntidadeC", "Novo", null,
+                    StdBrandingInfo100.Properties.RibbonResourcesVND.novo_16);
+
+            priGrelha1.AddOpcaoActiveBar(1, "mnuEditarEntidadeC", "Editar", null,
                     StdBrandingInfo100.Properties.RibbonResourcesVND.clientes_16);
 
             // Normal columns
