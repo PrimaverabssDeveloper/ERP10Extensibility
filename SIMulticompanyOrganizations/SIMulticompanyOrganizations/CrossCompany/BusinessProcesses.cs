@@ -44,11 +44,11 @@ namespace SUGIMPL_OME.CrossCompany
                 String strSQL = String.Format(
                 "select sum(pur) Purchases, sum(sls) Sales " +
                 "from(" +
-                "   select count(*) pur, 0 sls from cabecdoc cd left join documentosvenda dv on cd.tipodoc = dv.documento " +
-                "   where dv.cdu_exportagrupo = 1 AND cd.cdu_exportado = 0 AND cd.entidade = '{0}' " +
+                "   select count(*) pur, 0 sls from cabecdoc cd inner join CabecDocStatus cds on cds.IdCabecDoc=cd.Id left join documentosvenda dv on cd.tipodoc = dv.documento " +
+                "   where dv.cdu_exportagrupo = 1 AND cd.cdu_exportado = 0  AND cds.Anulado=0 AND cd.entidade = '{0}' " +
                 "   UNION ALL " +
-                "   select 0 pur, count(*) pur from cabeccompras cc left join documentoscompra dc on cc.tipodoc = dc.documento " +
-                "   where dc.cdu_exportagrupo = 1 AND isnull(cc.cdu_exportado, 0) = 0 AND cc.entidade = '{0}' " +
+                "   select 0 pur, count(*) pur from cabeccompras cc inner join CabecComprasStatus ccs on ccs.IdCabecCompras=cc.Id left join documentoscompra dc on cc.tipodoc = dc.documento " +
+                "   where dc.cdu_exportagrupo = 1 AND isnull(cc.cdu_exportado, 0) = 0 AND ccs.Anulado=0 AND cc.entidade = '{0}' " +
                 "   ) as tmp"
                 , oERPContext.BSO.Contexto.CodEmp);
 
@@ -110,8 +110,9 @@ namespace SUGIMPL_OME.CrossCompany
                     "   TargetDoc   = '', " +
                     "   ImportNotes = '' " +
                     "from PRI{0}..cabecdoc cd " +
+                    "   inner join PRI{0}..CabecDocStatus cds ON cds.IdCabecDoc = cd.id " +
                     "   left join PRI{0}..documentosvenda dv on cd.tipodoc=dv.documento " +
-                    "where dv.cdu_exportagrupo=1 " +
+                    "where dv.cdu_exportagrupo=1 and cds.Anulado = 0 " +
                     "   AND cd.cdu_exportado=0 " +
                     "   AND cd.entidade='{1}'",
                     groupCompany, oERPContext.BSO.Contexto.CodEmp);
@@ -133,8 +134,9 @@ namespace SUGIMPL_OME.CrossCompany
                     "   TargetDoc   = '', " +
                     "   ImportNotes = '' " +
                     "from PRI{0}..cabeccompras cc " +
+                    "   inner join PRI{0}..CabecComprasStatus ccs ON ccs.IdCabecCompras = cc.ID " +
                     "   left join PRI{0}..documentoscompra dc on cc.tipodoc=dc.documento " +
-                    "where dc.cdu_exportagrupo=1 " +
+                    "where dc.cdu_exportagrupo=1 and ccs.Anulado = 0 " +
                     "   AND cc.cdu_exportado=0 " +
                     "   AND cc.entidade='{1}'",
                     groupCompany, oERPContext.BSO.Contexto.CodEmp);
@@ -334,13 +336,13 @@ namespace SUGIMPL_OME.CrossCompany
                 }
 
                 //SAVE
-                string settlementSeries = string.Empty;
-                if (!oERPContext.BSO.Vendas.Documentos.ValidaActualizacao(targetDocument, salesTable, ref settlementSeries, ref strErrWarn))
-                {
-                    throw new Exception(strErrWarn);
-                }
-                else
-                {
+                //string settlementSeries = string.Empty;
+                //if (!oERPContext.BSO.Vendas.Documentos.ValidaActualizacao(targetDocument, salesTable, ref settlementSeries, ref strErrWarn))
+                //{
+                //    throw new Exception(strErrWarn);
+                //}
+                //else
+                //{
                     oERPContext.BSO.Vendas.Documentos.Actualiza(targetDocument, ref strErrWarn);
 
                     retValue = Tuple.Create<string, string>(
@@ -350,7 +352,7 @@ namespace SUGIMPL_OME.CrossCompany
                     oCompany.DSO.ExecuteSQL(string.Format("UPDATE CabecCompras SET CDU_Exportado=1 WHERE ID='{0}'", sourceDocument.ID));
                     //TODO: Eliminar (foi adicionado porque o objeto não estava a gravar os valores dos CDUs)
                     oERPContext.BSO.DSO.ExecuteSQL(string.Format("UPDATE CabecDoc SET CDU_Exportado=1 WHERE ID='{0}'", targetDocument.ID));
-                }
+                //}
             }
             catch (Exception e)
             {

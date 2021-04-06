@@ -84,6 +84,9 @@ namespace SUGIMPL_OME.CrossCompany
                     Properties.Settings.Default.User,
                     Properties.Settings.Default.Password);
 
+                //get the last exercise (to create the entity accounts for each exercise)
+                int lastYear = oERPContext.BSO.Contabilidade.ExerciciosCBL.DaUltimoAno();
+
                 switch (EntityType)
                 {
                     case "C":
@@ -99,19 +102,22 @@ namespace SUGIMPL_OME.CrossCompany
                             updatedCompanies.Add(groupCompany);
 
                             //Connection to CBL
-                            CblBECnfTabLinhaLigCBL objNewLinhaCnfTabLigCBL = oERPContext.BSO.Contabilidade.ConfiguracaoTabCBL.Edita(CblBE100.CblBECnfTabLinhaLigCBL.TETipoTabela.GCPClientes, oERPContext.BSO.Contabilidade.ExerciciosCBL.DaUltimoAno(), "001", Entity, 1);
-                            if (objNewLinhaCnfTabLigCBL != null)
+                            for (int currentYear = DateTime.Now.Year; currentYear <= lastYear; currentYear++)
                             {
-                                if (oCompany.Contabilidade.ConfiguracaoTabCBL.ExisteID(objNewLinhaCnfTabLigCBL.Id))
+                                CblBECnfTabLinhaLigCBL objNewLinhaCnfTabLigCBL = oERPContext.BSO.Contabilidade.ConfiguracaoTabCBL.Edita(CblBE100.CblBECnfTabLinhaLigCBL.TETipoTabela.GCPClientes, currentYear, "001", Entity, 1);
+                                if (objNewLinhaCnfTabLigCBL != null)
                                 {
-                                    oCompany.Contabilidade.ConfiguracaoTabCBL.ActualizaValorAtributoID(objNewLinhaCnfTabLigCBL.Id, "Conta", objNewLinhaCnfTabLigCBL.Conta);
-                                }
-                                else
-                                {
-                                    objNewLinhaCnfTabLigCBL.EmModoEdicao = false;
-                                    CblBECnfTabLigCBL objNewCnfTabLigCBL = oCompany.Contabilidade.ConfiguracaoTabCBL.EditaTabela(CblBECnfTabLinhaLigCBL.TETipoTabela.GCPClientes);
-                                    objNewCnfTabLigCBL.PlanoExercicios.GetEdita(1).Linhas.Insere(objNewLinhaCnfTabLigCBL);
-                                    oCompany.Contabilidade.ConfiguracaoTabCBL.Actualiza(objNewCnfTabLigCBL);
+                                    if (oCompany.Contabilidade.ConfiguracaoTabCBL.ExisteID(objNewLinhaCnfTabLigCBL.Id))
+                                    {
+                                        oCompany.Contabilidade.ConfiguracaoTabCBL.ActualizaValorAtributoID(objNewLinhaCnfTabLigCBL.Id, "Conta", objNewLinhaCnfTabLigCBL.Conta);
+                                    }
+                                    else
+                                    {
+                                        objNewLinhaCnfTabLigCBL.EmModoEdicao = false;
+                                        CblBECnfTabLigCBL objNewCnfTabLigCBL = oCompany.Contabilidade.ConfiguracaoTabCBL.EditaTabela(CblBECnfTabLinhaLigCBL.TETipoTabela.GCPClientes);
+                                        objNewCnfTabLigCBL.PlanoExercicios.GetEdita(1).Linhas.Insere(objNewLinhaCnfTabLigCBL);
+                                        oCompany.Contabilidade.ConfiguracaoTabCBL.Actualiza(objNewCnfTabLigCBL);
+                                    }
                                 }
                             }
                         }
@@ -129,19 +135,22 @@ namespace SUGIMPL_OME.CrossCompany
                             updatedCompanies.Add(groupCompany);
 
                             //Connection to CBL
-                            CblBECnfTabLinhaLigCBL objNewLinhaCnfTabLigCBL = oERPContext.BSO.Contabilidade.ConfiguracaoTabCBL.Edita(CblBE100.CblBECnfTabLinhaLigCBL.TETipoTabela.GCPFornecedores, oERPContext.BSO.Contabilidade.ExerciciosCBL.DaUltimoAno(), "001", Entity, 1);
-                            if (objNewLinhaCnfTabLigCBL != null)
+                            for (int currentYear = DateTime.Now.Year; currentYear <= lastYear; currentYear++)
                             {
-                                if (oCompany.Contabilidade.ConfiguracaoTabCBL.ExisteID(objNewLinhaCnfTabLigCBL.Id))
+                                CblBECnfTabLinhaLigCBL objNewLinhaCnfTabLigCBL = oERPContext.BSO.Contabilidade.ConfiguracaoTabCBL.Edita(CblBE100.CblBECnfTabLinhaLigCBL.TETipoTabela.GCPFornecedores, currentYear, "001", Entity, 1);
+                                if (objNewLinhaCnfTabLigCBL != null)
                                 {
-                                    oCompany.Contabilidade.ConfiguracaoTabCBL.ActualizaValorAtributoID(objNewLinhaCnfTabLigCBL.Id, "Conta", objNewLinhaCnfTabLigCBL.Conta);
-                                }
-                                else
-                                {
-                                    objNewLinhaCnfTabLigCBL.EmModoEdicao = false;
-                                    CblBECnfTabLigCBL objNewCnfTabLigCBL = oCompany.Contabilidade.ConfiguracaoTabCBL.EditaTabela(CblBECnfTabLinhaLigCBL.TETipoTabela.GCPFornecedores);
-                                    objNewCnfTabLigCBL.PlanoExercicios.GetEdita(1).Linhas.Insere(objNewLinhaCnfTabLigCBL);
-                                    oCompany.Contabilidade.ConfiguracaoTabCBL.Actualiza(objNewCnfTabLigCBL);
+                                    if (oCompany.Contabilidade.ConfiguracaoTabCBL.ExisteID(objNewLinhaCnfTabLigCBL.Id))
+                                    {
+                                        oCompany.Contabilidade.ConfiguracaoTabCBL.ActualizaValorAtributoID(objNewLinhaCnfTabLigCBL.Id, "Conta", objNewLinhaCnfTabLigCBL.Conta);
+                                    }
+                                    else
+                                    {
+                                        objNewLinhaCnfTabLigCBL.EmModoEdicao = false;
+                                        CblBECnfTabLigCBL objNewCnfTabLigCBL = oCompany.Contabilidade.ConfiguracaoTabCBL.EditaTabela(CblBECnfTabLinhaLigCBL.TETipoTabela.GCPFornecedores);
+                                        objNewCnfTabLigCBL.PlanoExercicios.GetEdita(1).Linhas.Insere(objNewLinhaCnfTabLigCBL);
+                                        oCompany.Contabilidade.ConfiguracaoTabCBL.Actualiza(objNewCnfTabLigCBL);
+                                    }
                                 }
                             }
                         }
@@ -160,19 +169,22 @@ namespace SUGIMPL_OME.CrossCompany
                             updatedCompanies.Add(groupCompany);
 
                             //Connection to CBL
-                            CblBECnfTabLinhaLigCBL objNewLinhaCnfTabLigCBL = oERPContext.BSO.Contabilidade.ConfiguracaoTabCBL.Edita(CblBE100.CblBECnfTabLinhaLigCBL.TETipoTabela.GCPOutrosTerceiros, oERPContext.BSO.Contabilidade.ExerciciosCBL.DaUltimoAno(), "001", Entity, 1);
-                            if (objNewLinhaCnfTabLigCBL != null)
+                            for (int currentYear = DateTime.Now.Year; currentYear <= lastYear; currentYear++)
                             {
-                                if (oCompany.Contabilidade.ConfiguracaoTabCBL.ExisteID(objNewLinhaCnfTabLigCBL.Id))
+                                CblBECnfTabLinhaLigCBL objNewLinhaCnfTabLigCBL = oERPContext.BSO.Contabilidade.ConfiguracaoTabCBL.Edita(CblBE100.CblBECnfTabLinhaLigCBL.TETipoTabela.GCPOutrosTerceiros, currentYear, "001", Entity, 1);
+                                if (objNewLinhaCnfTabLigCBL != null)
                                 {
-                                    oCompany.Contabilidade.ConfiguracaoTabCBL.ActualizaValorAtributoID(objNewLinhaCnfTabLigCBL.Id, "Conta", objNewLinhaCnfTabLigCBL.Conta);
-                                }
-                                else
-                                {
-                                    objNewLinhaCnfTabLigCBL.EmModoEdicao = false;
-                                    CblBECnfTabLigCBL objNewCnfTabLigCBL = oCompany.Contabilidade.ConfiguracaoTabCBL.EditaTabela(CblBECnfTabLinhaLigCBL.TETipoTabela.GCPOutrosTerceiros);
-                                    objNewCnfTabLigCBL.PlanoExercicios.GetEdita(1).Linhas.Insere(objNewLinhaCnfTabLigCBL);
-                                    oCompany.Contabilidade.ConfiguracaoTabCBL.Actualiza(objNewCnfTabLigCBL);
+                                    if (oCompany.Contabilidade.ConfiguracaoTabCBL.ExisteID(objNewLinhaCnfTabLigCBL.Id))
+                                    {
+                                        oCompany.Contabilidade.ConfiguracaoTabCBL.ActualizaValorAtributoID(objNewLinhaCnfTabLigCBL.Id, "Conta", objNewLinhaCnfTabLigCBL.Conta);
+                                    }
+                                    else
+                                    {
+                                        objNewLinhaCnfTabLigCBL.EmModoEdicao = false;
+                                        CblBECnfTabLigCBL objNewCnfTabLigCBL = oCompany.Contabilidade.ConfiguracaoTabCBL.EditaTabela(CblBECnfTabLinhaLigCBL.TETipoTabela.GCPOutrosTerceiros);
+                                        objNewCnfTabLigCBL.PlanoExercicios.GetEdita(1).Linhas.Insere(objNewLinhaCnfTabLigCBL);
+                                        oCompany.Contabilidade.ConfiguracaoTabCBL.Actualiza(objNewCnfTabLigCBL);
+                                    }
                                 }
                             }
                         }

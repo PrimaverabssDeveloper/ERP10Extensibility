@@ -6,10 +6,13 @@
       <Value Profile="(Default)">PRIEMPRE</Value>
     </Setting>
     <Setting Name="User" Type="System.String" Scope="User">
-      <Value Profile="(Default)">admin</Value>
+      <Value Profile="(Default)">nuno.queiros</Value>
     </Setting>
     <Setting Name="Password" Type="System.String" Scope="User">
       <Value Profile="(Default)">pa$$w0rd</Value>
+    </Setting>
+    <Setting Name="UnlockPIN" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1234</Value>
     </Setting>
   </Settings>
 </SettingsFile>

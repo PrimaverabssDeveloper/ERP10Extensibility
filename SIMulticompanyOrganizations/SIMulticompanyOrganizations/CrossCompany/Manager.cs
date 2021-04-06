@@ -58,7 +58,7 @@ namespace SUGIMPL_OME.CrossCompany
             if (pendingDocuments.Count>0 && (pendingDocuments["Sales"]>0 || pendingDocuments["Purchases"] > 0))
             {
                 ERPContext.PSO.Bot.CriaMensagem(
-                    "Group Transactions",
+                    "Group Transactions", "Verifica transações entre empresas",
                     String.Format("Existem documentos para integração nesta empresa ({0} documento(s) de venda e {1} documento(s) de compra).", pendingDocuments["Sales"], pendingDocuments["Purchases"]),
                     null,
                     false);

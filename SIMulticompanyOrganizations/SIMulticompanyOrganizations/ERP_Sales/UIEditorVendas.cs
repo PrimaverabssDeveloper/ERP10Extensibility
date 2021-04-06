@@ -53,7 +53,7 @@ namespace SUGIMPL_OME.ERP_Sales
                         StdPlatBS100.StdBSTipos.IconId.PRI_Questiona) == StdPlatBS100.StdBSTipos.ResultMsg.PRI_Sim)
                     {
                         Cancel = false;
-                        if (!mngr.PLT_CheckPassword("1234")) // TODO: Refactor password management
+                        if (!mngr.PLT_CheckPassword(Properties.Settings.Default.UnlockPIN))
                         {
                             Cancel = true;
                             PSO.Dialogos.MostraMensagem(StdPlatBS100.StdBSTipos.TipoMsg.PRI_SimplesOk, "PIN inválido!", StdPlatBS100.StdBSTipos.IconId.PRI_Critico);
