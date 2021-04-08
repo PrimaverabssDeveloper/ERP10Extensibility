@@ -336,13 +336,13 @@ namespace SUGIMPL_OME.CrossCompany
                 }
 
                 //SAVE
-                //string settlementSeries = string.Empty;
-                //if (!oERPContext.BSO.Vendas.Documentos.ValidaActualizacao(targetDocument, salesTable, ref settlementSeries, ref strErrWarn))
-                //{
-                //    throw new Exception(strErrWarn);
-                //}
-                //else
-                //{
+                string settlementSeries = string.Empty;
+                if (!oERPContext.BSO.Vendas.Documentos.ValidaActualizacao(targetDocument, salesTable, ref settlementSeries, ref strErrWarn))
+                {
+                    throw new Exception(strErrWarn);
+                }
+                else
+                {
                     oERPContext.BSO.Vendas.Documentos.Actualiza(targetDocument, ref strErrWarn);
 
                     retValue = Tuple.Create<string, string>(
@@ -352,7 +352,7 @@ namespace SUGIMPL_OME.CrossCompany
                     oCompany.DSO.ExecuteSQL(string.Format("UPDATE CabecCompras SET CDU_Exportado=1 WHERE ID='{0}'", sourceDocument.ID));
                     //TODO: Eliminar (foi adicionado porque o objeto não estava a gravar os valores dos CDUs)
                     oERPContext.BSO.DSO.ExecuteSQL(string.Format("UPDATE CabecDoc SET CDU_Exportado=1 WHERE ID='{0}'", targetDocument.ID));
-                //}
+                }
             }
             catch (Exception e)
             {
