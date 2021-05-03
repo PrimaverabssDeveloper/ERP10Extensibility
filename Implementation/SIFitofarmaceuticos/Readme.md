@@ -1,3 +1,4 @@
+<<<<<<< HEAD:Implementation/SIFitofarmaceuticos/Readme.md
 # Implementation Suggetion
 
 In this directory you will the code sample to implement the Implementation Suggetion that handles the "Fitofarmacêuticos" portuguese legal requirements in a PRIMAVERA ERP V10 environment.
