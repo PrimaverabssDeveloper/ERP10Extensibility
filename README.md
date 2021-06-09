@@ -27,7 +27,6 @@ This repository is organized in two sections, in the section **samples** you wil
 | [Custom Tab](samples/Custom%20Tabs) | Add a custom tab to customer entity. A Tab with goole maps integration. |
 | [Custom Ribbon](samples/Custom%20Ribbon) | Add's a new TAB on the ERP Ribbon. |
 | [Primavera Logger ](samples/Primavera%20Logger)| Log all the errors and events of your extensibility project. |
-| [Primavera SDK](samples/Primavera%20SDK) | Learn how to use the SDK PriGrid and F4 controls. |
 | [Primavera.RelatedInfo](samples/Primavera.RelatedInfo) | Adds a new control to the invoice context panel to show the customer pending documents.|
 
 ### In Implementation Section
