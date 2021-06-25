@@ -63,17 +63,16 @@ namespace Primavera.CustomRibbon
             RibbonEvents.Executa += RibbonEvents_Executa;
 
             // Register the add-in.
-            CriateTab();
+            CreateTab();
             CreateGroup();
-            CreateGroupButton32(RibbonConstants.cTAB1_GROUP1_IDBUTTON1, "Visual Studio 2017", Resources.VS2017_256x256);
-            CreateGroupButton32(RibbonConstants.cTAB2_GROUP1_IDBUTTON1, "Visual Studio 2019", Resources.VS2017_256x256);
+            CreateGroupButton32();
         }
 
         #endregion
 
         #region Private methods
 
-        private void CriateTab()
+        private void CreateTab()
         {
            this.PSO.Ribbon.CriaRibbonTab("TAB 1", RibbonConstants.cIDTAB1, 10);
            this.PSO.Ribbon.CriaRibbonTab("TAB 2", RibbonConstants.cIDTAB2, 10);
@@ -85,10 +84,11 @@ namespace Primavera.CustomRibbon
             this.PSO.Ribbon.CriaRibbonGroup(RibbonConstants.cIDTAB2, "Extensibility 2", RibbonConstants.cIDTAB2_GROUP1);
         }
 
-        private void CreateGroupButton32(string buttonId, string buttonDescription, Image buttonImage )
+        private void CreateGroupButton32()
         {
-            this.PSO.Ribbon.CriaRibbonButton(RibbonConstants.cIDTAB1, RibbonConstants.cIDTAB1_GROUP1, buttonId, buttonDescription, true, buttonImage);
-            this.PSO.Ribbon.CriaRibbonButton(RibbonConstants.cIDTAB2, RibbonConstants.cIDTAB2_GROUP1, buttonId, buttonDescription, true, buttonImage);
+            this.PSO.Ribbon.CriaRibbonButton(RibbonConstants.cIDTAB1, RibbonConstants.cIDTAB1_GROUP1, RibbonConstants.cTAB1_GROUP1_IDBUTTON1, "Visual Studio 2017", true, Resources.VS2017_256x256);
+            this.PSO.Ribbon.CriaRibbonButton(RibbonConstants.cIDTAB1, RibbonConstants.cIDTAB1_GROUP1, RibbonConstants.cTAB1_GROUP1_IDBUTTON2, "Visual Studio 2019", true, Resources.VS2017_256x256);
+            this.PSO.Ribbon.CriaRibbonButton(RibbonConstants.cIDTAB2, RibbonConstants.cIDTAB2_GROUP1, RibbonConstants.cTAB2_GROUP1_IDBUTTON1, "Visual Studio 2020", true, Resources.VS2017_256x256);
         }
 
         #endregion
