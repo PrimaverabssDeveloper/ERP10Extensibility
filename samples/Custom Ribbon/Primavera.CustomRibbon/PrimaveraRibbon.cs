@@ -48,7 +48,7 @@ namespace Primavera.CustomRibbon
             }
             catch (System.Exception ex)
             {
-               PSO.Dialogos.MostraAviso("The file don't exist.",StdBSTipos.IconId.PRI_Informativo,ex.Message);
+               PSO.MensagensDialogos.MostraAviso("The file don't exist.",StdBSTipos.IconId.PRI_Informativo,ex.Message);
             }
         }
 
