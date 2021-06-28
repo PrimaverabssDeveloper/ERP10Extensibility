@@ -65,8 +65,8 @@ namespace Primavera.CustomRibbon
             // Register the add-in.
             CriateTab();
             CreateGroup();
-            CreateGroupButton32(RibbonConstants.cTAB1_GROUP1_IDBUTTON1, "Visual Studio 2017", Resources.VS2017_256x256);
-            CreateGroupButton32(RibbonConstants.cTAB2_GROUP1_IDBUTTON1, "Visual Studio 2019", Resources.VS2017_256x256);
+            CreateGroupButton32(RibbonConstants.cIDTAB1, RibbonConstants.cIDTAB1_GROUP1, RibbonConstants.cTAB1_GROUP1_IDBUTTON1, "Visual Studio 2017", Resources.VS2017_256x256);
+            CreateGroupButton32(RibbonConstants.cIDTAB2, RibbonConstants.cIDTAB2_GROUP1, RibbonConstants.cTAB2_GROUP1_IDBUTTON1, "Visual Studio 2019", Resources.VS2017_256x256);
         }
 
         #endregion
@@ -85,10 +85,9 @@ namespace Primavera.CustomRibbon
             this.PSO.Ribbon.CriaRibbonGroup(RibbonConstants.cIDTAB2, "Extensibility 2", RibbonConstants.cIDTAB2_GROUP1);
         }
 
-        private void CreateGroupButton32(string buttonId, string buttonDescription, Image buttonImage )
+        private void CreateGroupButton32(string tabId,string groupId, string buttonId, string buttonDescription, Image buttonImage )
         {
-            this.PSO.Ribbon.CriaRibbonButton(RibbonConstants.cIDTAB1, RibbonConstants.cIDTAB1_GROUP1, buttonId, buttonDescription, true, buttonImage);
-            this.PSO.Ribbon.CriaRibbonButton(RibbonConstants.cIDTAB2, RibbonConstants.cIDTAB2_GROUP1, buttonId, buttonDescription, true, buttonImage);
+            this.PSO.Ribbon.CriaRibbonButton(tabId, groupId, buttonId, buttonDescription, true, buttonImage);
         }
 
         #endregion
