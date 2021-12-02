@@ -1,0 +1,1207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B69DE779-7C44-4ACC-ABF4-E73FC082A0CB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Primavera.Platform.Geolocation</RootNamespace>
+    <AssemblyName>Primavera.Platform.Geolocation</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\_Bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\_Bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AdmBE100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\AdmBE100.10.10.0.2531\lib\net471\AdmBE100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AdmBS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\AdmBS100.10.10.0.2531\lib\net471\AdmBS100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AdmEngine100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\AdmEngine100.10.10.0.2531\lib\net471\AdmEngine100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AdvancedStringBuilder, Version=0.1.0.0, Culture=neutral, PublicKeyToken=e818a2fc08933ddb, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\AdvancedStringBuilder.0.1.0\lib\net45\AdvancedStringBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="AegisImplicitMail, Version=1.0.0.2, Culture=neutral, PublicKeyToken=33086db60a481256, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\AegisImplicitMail.10.0010.0000.2500\lib\AegisImplicitMail.dll</HintPath>
+    </Reference>
+    <Reference Include="BasBE100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\BasBE100.10.10.0.2533\lib\net471\BasBE100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CblBE100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\CblBE100.10.10.0.2506\lib\net471\CblBE100.dll</HintPath>
+    </Reference>
+    <Reference Include="CctBE100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\CctBE100.10.10.0.2510\lib\net471\CctBE100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CmpBE100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\CmpBE100.10.10.0.2507\lib\net471\CmpBE100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ConstantesPrimavera100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\ConstantesPrimavera100.10.10.0.2533\lib\net471\ConstantesPrimavera100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrmBE100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\CrmBE100.10.10.0.2502\lib\net471\CrmBE100.dll</HintPath>
+    </Reference>
+    <Reference Include="CRUFLPriGlobal100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\CRUFLPriGlobal100.10.10.0.2531\lib\net471\CRUFLPriGlobal100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\CrystalDecisions.10.0010.0000.2500\lib\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ClientDoc, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\CrystalDecisions.10.0010.0000.2500\lib\CrystalDecisions.ReportAppServer.ClientDoc.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\CrystalDecisions.10.0010.0000.2500\lib\CrystalDecisions.ReportAppServer.CommLayer.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonControls, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\CrystalDecisions.10.0010.0000.2500\lib\CrystalDecisions.ReportAppServer.CommonControls.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonObjectModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\CrystalDecisions.10.0010.0000.2500\lib\CrystalDecisions.ReportAppServer.CommonObjectModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Controllers, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\CrystalDecisions.10.0010.0000.2500\lib\CrystalDecisions.ReportAppServer.Controllers.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CubeDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\CrystalDecisions.10.0010.0000.2500\lib\CrystalDecisions.ReportAppServer.CubeDefModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\CrystalDecisions.10.0010.0000.2500\lib\CrystalDecisions.ReportAppServer.DataDefModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataSetConversion, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\CrystalDecisions.10.0010.0000.2500\lib\CrystalDecisions.ReportAppServer.DataSetConversion.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ObjectFactory, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\CrystalDecisions.10.0010.0000.2500\lib\CrystalDecisions.ReportAppServer.ObjectFactory.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Prompting, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\CrystalDecisions.10.0010.0000.2500\lib\CrystalDecisions.ReportAppServer.Prompting.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ReportDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\CrystalDecisions.10.0010.0000.2500\lib\CrystalDecisions.ReportAppServer.ReportDefModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.XmlSerialize, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\CrystalDecisions.10.0010.0000.2500\lib\CrystalDecisions.ReportAppServer.XmlSerialize.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\CrystalDecisions.10.0010.0000.2500\lib\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\CrystalDecisions.10.0010.0000.2500\lib\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\CrystalDecisions.10.0010.0000.2500\lib\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.Desktop.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Map.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraMap.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DotNetZip, Version=1.13.3.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\DotNetZip.1.13.3\lib\net40\DotNetZip.dll</HintPath>
+    </Reference>
+    <Reference Include="EapBE100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\EapBE100.10.10.0.2507\lib\net471\EapBE100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Elasticsearch.Net, Version=7.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Elasticsearch.Net.7.1.0\lib\net461\Elasticsearch.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="ErpBS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\ErpBS100.10.10.0.2507\lib\net471\ErpBS100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ErpDS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\ErpDS100.10.10.0.2507\lib\net471\ErpDS100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GabBE100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\GabBE100.10.10.0.2501\lib\net471\GabBE100.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.Core, Version=2.0.2.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_external\GMap.NET.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsForms, Version=2.0.2.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_external\GMap.NET.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="GprBE100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\GprBE100.10.10.0.2504\lib\net471\GprBE100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IBasBS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\IBasBS100.10.10.0.2533\lib\net471\IBasBS100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IBasDS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\IBasDS100.10.10.0.2533\lib\net471\IBasDS100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ICblBS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\ICblBS100.10.10.0.2506\lib\net471\ICblBS100.dll</HintPath>
+    </Reference>
+    <Reference Include="ICblBSExt100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\ICblBSExt100.10.10.0.2506\lib\net471\ICblBSExt100.dll</HintPath>
+    </Reference>
+    <Reference Include="ICblDS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\ICblDS100.10.10.0.2506\lib\net471\ICblDS100.dll</HintPath>
+    </Reference>
+    <Reference Include="ICctBS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\ICctBS100.10.10.0.2510\lib\net471\ICctBS100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ICctDS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\ICctDS100.10.10.0.2510\lib\net471\ICctDS100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ICmpBS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\ICmpBS100.10.10.0.2507\lib\net471\ICmpBS100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ICmpDS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\ICmpDS100.10.10.0.2507\lib\net471\ICmpDS100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ICnoBS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\ICnoBS100.10.10.0.2501\lib\net471\ICnoBS100.dll</HintPath>
+    </Reference>
+    <Reference Include="ICnoDS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\ICnoDS100.10.10.0.2501\lib\net471\ICnoDS100.dll</HintPath>
+    </Reference>
+    <Reference Include="ICrmBS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\ICrmBS100.10.10.0.2502\lib\net471\ICrmBS100.dll</HintPath>
+    </Reference>
+    <Reference Include="ICrmDS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\ICrmDS100.10.10.0.2502\lib\net471\ICrmDS100.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=1.1.0.145, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\SharpZipLib.1.1.0\lib\net45\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="IdentityModel, Version=4.3.1.0, Culture=neutral, PublicKeyToken=e7877f4675df049f, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\IdentityModel.4.3.1\lib\net461\IdentityModel.dll</HintPath>
+    </Reference>
+    <Reference Include="IEapBS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\IEapBS100.10.10.0.2507\lib\net471\IEapBS100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IEapDS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\IEapDS100.10.10.0.2507\lib\net471\IEapDS100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IFacBS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\IFacBS100.10.10.0.2501\lib\net471\IFacBS100.dll</HintPath>
+    </Reference>
+    <Reference Include="IFacDS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\IFacDS100.10.10.0.2501\lib\net471\IFacDS100.dll</HintPath>
+    </Reference>
+    <Reference Include="IGabBS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\IGabBS100.10.10.0.2501\lib\net471\IGabBS100.dll</HintPath>
+    </Reference>
+    <Reference Include="IGabDS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\IGabDS100.10.10.0.2501\lib\net471\IGabDS100.dll</HintPath>
+    </Reference>
+    <Reference Include="IGprBS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\IGprBS100.10.10.0.2504\lib\net471\IGprBS100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IGprDS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\IGprDS100.10.10.0.2504\lib\net471\IGprDS100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IIntBS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\IIntBS100.10.10.0.2504\lib\net471\IIntBS100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IIntDS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\IIntDS100.10.10.0.2504\lib\net471\IIntDS100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IInvBS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\IInvBS100.10.10.0.2530\lib\net471\IInvBS100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IInvDS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\IInvDS100.10.10.0.2530\lib\net471\IInvDS100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IntBE100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\IntBE100.10.10.0.2504\lib\net471\IntBE100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="InvBE100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\InvBE100.10.10.0.2530\lib\net471\InvBE100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IOrcBS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\IOrcBS100.10.10.0.2515\lib\net471\IOrcBS100.dll</HintPath>
+    </Reference>
+    <Reference Include="IOrcDS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\IOrcDS100.10.10.0.2515\lib\net471\IOrcDS100.dll</HintPath>
+    </Reference>
+    <Reference Include="IPcmBS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\IPcmBS100.10.10.0.2501\lib\net471\IPcmBS100.dll</HintPath>
+    </Reference>
+    <Reference Include="IPcmDS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\IPcmDS100.10.10.0.2501\lib\net471\IPcmDS100.dll</HintPath>
+    </Reference>
+    <Reference Include="IPrjBS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\IPrjBS100.10.10.0.2504\lib\net471\IPrjBS100.dll</HintPath>
+    </Reference>
+    <Reference Include="IPrjDS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\IPrjDS100.10.10.0.2504\lib\net471\IPrjDS100.dll</HintPath>
+    </Reference>
+    <Reference Include="IRhpBS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\IRhpBS100.10.10.0.2513\lib\net471\IRhpBS100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IRhpDS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\IRhpDS100.10.10.0.2513\lib\net471\IRhpDS100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IStpBS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\IStpBS100.10.10.0.2501\lib\net471\IStpBS100.dll</HintPath>
+    </Reference>
+    <Reference Include="IStpDS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\IStpDS100.10.10.0.2501\lib\net471\IStpDS100.dll</HintPath>
+    </Reference>
+    <Reference Include="ITesBS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\ITesBS100.10.10.0.2501\lib\net471\ITesBS100.dll</HintPath>
+    </Reference>
+    <Reference Include="ITesDS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\ITesDS100.10.10.0.2501\lib\net471\ITesDS100.dll</HintPath>
+    </Reference>
+    <Reference Include="ITTEBS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\ITTEBS100.10.10.0.2501\lib\net471\ITTEBS100.dll</HintPath>
+    </Reference>
+    <Reference Include="ITTEDS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\ITTEDS100.10.10.0.2501\lib\net471\ITTEDS100.dll</HintPath>
+    </Reference>
+    <Reference Include="IVndBS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\IVndBS100.10.10.0.2511\lib\net471\IVndBS100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IVndDS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\IVndDS100.10.10.0.2511\lib\net471\IVndDS100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LiteDB, Version=5.0.10.0, Culture=neutral, PublicKeyToken=4ee40123013c9f27, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\LiteDB.5.0.10\lib\net45\LiteDB.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Services.AppAuthentication, Version=1.0.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.Azure.Services.AppAuthentication.1.0.3\lib\net452\Microsoft.Azure.Services.AppAuthentication.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.1\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.Extensions.Caching.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Caching.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Memory, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.Extensions.Caching.Memory.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Caching.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration, Version=3.1.4.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.Extensions.Configuration.3.1.4\lib\netstandard2.0\Microsoft.Extensions.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=3.1.4.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.Extensions.Configuration.Abstractions.3.1.4\lib\netstandard2.0\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Binder, Version=3.1.4.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.Extensions.Configuration.Binder.3.1.4\lib\netstandard2.0\Microsoft.Extensions.Configuration.Binder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=3.1.4.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.Extensions.DependencyInjection.3.1.4\lib\net461\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=3.1.4.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.3.1.4\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=3.1.4.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.Extensions.Logging.3.1.4\lib\netstandard2.0\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=3.1.4.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.Extensions.Logging.Abstractions.3.1.4\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=3.1.4.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.Extensions.Options.3.1.4\lib\netstandard2.0\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options.ConfigurationExtensions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.Extensions.Options.ConfigurationExtensions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=3.1.4.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.Extensions.Primitives.3.1.4\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Clients.ActiveDirectory, Version=3.14.2.11, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.IdentityModel.Clients.ActiveDirectory.3.14.2\lib\net45\Microsoft.IdentityModel.Clients.ActiveDirectory.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Clients.ActiveDirectory.Platform, Version=3.14.2.11, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.IdentityModel.Clients.ActiveDirectory.3.14.2\lib\net45\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.IdentityModel.JsonWebTokens.5.2.4\lib\net451\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.IdentityModel.Logging.5.2.4\lib\net451\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.IdentityModel.Tokens.5.2.4\lib\net451\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.Practices.10.0010.0000.2500\lib\Microsoft.Practices.EnterpriseLibrary.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.Practices.10.0010.0000.2500\lib\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.Practices.10.0010.0000.2500\lib\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.Practices.10.0010.0000.2500\lib\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.Practices.10.0010.0000.2500\lib\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder2, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.Practices.10.0010.0000.2500\lib\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.Practices.10.0010.0000.2500\lib\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.Practices.10.0010.0000.2500\lib\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.Practices.10.0010.0000.2500\lib\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.Practices.10.0010.0000.2500\lib\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception.Configuration, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.Practices.10.0010.0000.2500\lib\Microsoft.Practices.Unity.Interception.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Rest.ClientRuntime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.Rest.ClientRuntime.2.3.21\lib\net461\Microsoft.Rest.ClientRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ServiceBus, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\WindowsAzure.ServiceBus.6.0.1\lib\net462\Microsoft.ServiceBus.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.AzureStorageEnum, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.SqlServer.SqlManagementObjects.140.17224.0\lib\net40\Microsoft.SqlServer.AzureStorageEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.BatchParserClient, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.SqlServer.SqlManagementObjects.140.17224.0\lib\net40\Microsoft.SqlServer.BatchParserClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.SqlServer.SqlManagementObjects.140.17224.0\lib\net40\Microsoft.SqlServer.ConnectionInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfoExtended, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.SqlServer.SqlManagementObjects.140.17224.0\lib\net40\Microsoft.SqlServer.ConnectionInfoExtended.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Diagnostics.Strace, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.SqlServer.SqlManagementObjects.140.17224.0\lib\net40\Microsoft.SqlServer.Diagnostics.Strace.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Dmf, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.SqlServer.SqlManagementObjects.140.17224.0\lib\net40\Microsoft.SqlServer.Dmf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Dmf.Common, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.SqlServer.SqlManagementObjects.140.17224.0\lib\net40\Microsoft.SqlServer.Dmf.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Collector, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.SqlServer.SqlManagementObjects.140.17224.0\lib\net40\Microsoft.SqlServer.Management.Collector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.CollectorEnum, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.SqlServer.SqlManagementObjects.140.17224.0\lib\net40\Microsoft.SqlServer.Management.CollectorEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.RegisteredServers, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.SqlServer.SqlManagementObjects.140.17224.0\lib\net40\Microsoft.SqlServer.Management.RegisteredServers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.SqlServer.SqlManagementObjects.140.17224.0\lib\net40\Microsoft.SqlServer.Management.Sdk.Sfc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Utility, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.SqlServer.SqlManagementObjects.140.17224.0\lib\net40\Microsoft.SqlServer.Management.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.UtilityEnum, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.SqlServer.SqlManagementObjects.140.17224.0\lib\net40\Microsoft.SqlServer.Management.UtilityEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.XEvent, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.SqlServer.SqlManagementObjects.140.17224.0\lib\net40\Microsoft.SqlServer.Management.XEvent.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.XEventDbScoped, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.SqlServer.SqlManagementObjects.140.17224.0\lib\net40\Microsoft.SqlServer.Management.XEventDbScoped.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.XEventDbScopedEnum, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.SqlServer.SqlManagementObjects.140.17224.0\lib\net40\Microsoft.SqlServer.Management.XEventDbScopedEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.XEventEnum, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.SqlServer.SqlManagementObjects.140.17224.0\lib\net40\Microsoft.SqlServer.Management.XEventEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.PolicyEnum, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.SqlServer.SqlManagementObjects.140.17224.0\lib\net40\Microsoft.SqlServer.PolicyEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.RegSvrEnum, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.SqlServer.SqlManagementObjects.140.17224.0\lib\net40\Microsoft.SqlServer.RegSvrEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ServiceBrokerEnum, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.SqlServer.SqlManagementObjects.140.17224.0\lib\net40\Microsoft.SqlServer.ServiceBrokerEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Smo, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.SqlServer.SqlManagementObjects.140.17224.0\lib\net40\Microsoft.SqlServer.Smo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SmoExtended, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.SqlServer.SqlManagementObjects.140.17224.0\lib\net40\Microsoft.SqlServer.SmoExtended.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SqlClrProvider, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.SqlServer.SqlManagementObjects.140.17224.0\lib\net40\Microsoft.SqlServer.SqlClrProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SqlEnum, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.SqlServer.SqlManagementObjects.140.17224.0\lib\net40\Microsoft.SqlServer.SqlEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SqlTDiagm, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.SqlServer.SqlManagementObjects.140.17224.0\lib\net40\Microsoft.SqlServer.SqlTDiagm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SqlWmiManagement, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.SqlServer.SqlManagementObjects.140.17224.0\lib\net40\Microsoft.SqlServer.SqlWmiManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SString, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.SqlServer.SqlManagementObjects.140.17224.0\lib\net40\Microsoft.SqlServer.SString.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.SqlServer.SqlManagementObjects.140.17224.0\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.WmiEnum, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.SqlServer.SqlManagementObjects.140.17224.0\lib\net40\Microsoft.SqlServer.WmiEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.VisualBasic.PowerPacks.Vs.10.0010.0000.2500\lib\Microsoft.VisualBasic.PowerPacks.Vs.dll</HintPath>
+    </Reference>
+    <Reference Include="mScriptable, Version=0.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\mScriptable.10.0010.0000.2500\lib\mScriptable.dll</HintPath>
+    </Reference>
+    <Reference Include="MsieJavaScriptEngine, Version=3.0.2.0, Culture=neutral, PublicKeyToken=a3a2846a37ac0d3e, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\MsieJavaScriptEngine.3.0.2\lib\net45\MsieJavaScriptEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="Nest, Version=7.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\NEST.7.1.0\lib\net461\Nest.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\NLog.4.5.11\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenMcdf, Version=2.2.1.2, Culture=neutral, PublicKeyToken=fdbb1629d7c00800, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\OpenMcdf.2.2.1.3\lib\net40\OpenMcdf.dll</HintPath>
+    </Reference>
+    <Reference Include="OrcBE100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\OrcBE100.10.10.0.2515\lib\net471\OrcBE100.dll</HintPath>
+    </Reference>
+    <Reference Include="PcmBE100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\PcmBE100.10.10.0.2501\lib\net471\PcmBE100.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\PDFsharp.1.50.5147\lib\net20\PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp.Charting, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\PDFsharp.1.50.5147\lib\net20\PdfSharp.Charting.dll</HintPath>
+    </Reference>
+    <Reference Include="PriGrid100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\PriGrid100.10.10.0.2531\lib\net471\PriGrid100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Primavera.Athena.Core, Version=1.5.0.0, Culture=neutral, PublicKeyToken=33086db60a481256, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Primavera.Athena.Core.10.0010.0000.2500\lib\Primavera.Athena.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Primavera.Athena.Core.Threading, Version=1.5.0.0, Culture=neutral, PublicKeyToken=33086db60a481256, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Primavera.Athena.Core.10.0010.0000.2500\lib\Primavera.Athena.Core.Threading.dll</HintPath>
+    </Reference>
+    <Reference Include="Primavera.Athena.Patterns.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=33086db60a481256, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Primavera.Athena.Core.10.0010.0000.2500\lib\Primavera.Athena.Patterns.Entities.dll</HintPath>
+    </Reference>
+    <Reference Include="Primavera.Bas.Controls100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\Primavera.Bas.Controls100.10.10.0.2533\lib\net471\Primavera.Bas.Controls100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Primavera.Base.Helpers, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\Primavera.Base.Helpers.10.10.0.2533\lib\net471\Primavera.Base.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Primavera.Bot.Data.Interfaces, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\Primavera.Bot.Data.Interfaces.10.10.0.2517\lib\net471\Primavera.Bot.Data.Interfaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Primavera.Bot.Data.Providers, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\Primavera.Bot.Data.Providers.10.10.0.2517\lib\net471\Primavera.Bot.Data.Providers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Primavera.Bot.Engine100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\Primavera.Bot.Engine100.10.10.0.2517\lib\net471\Primavera.Bot.Engine100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Primavera.Bot.Entities, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\Primavera.Bot.Entities.10.10.0.2517\lib\net471\Primavera.Bot.Entities.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Primavera.Bot.Managers, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\Primavera.Bot.Managers.10.10.0.2517\lib\net471\Primavera.Bot.Managers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Primavera.Bot.Managers.Interfaces, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\Primavera.Bot.Managers.Interfaces.10.10.0.2517\lib\net471\Primavera.Bot.Managers.Interfaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Primavera.Cloud.Core, Version=3.0.0.0, Culture=neutral, PublicKeyToken=33086db60a481256, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Primavera.Cloud.10.0010.0000.2500\lib\Primavera.Cloud.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Primavera.Cloud.Security, Version=3.0.0.0, Culture=neutral, PublicKeyToken=33086db60a481256, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Primavera.Cloud.10.0010.0000.2500\lib\Primavera.Cloud.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Primavera.Core, Version=2.1.0.0, Culture=neutral, PublicKeyToken=33086db60a481256, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Primavera.Core.10.0010.0000.2500\lib\Primavera.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Primavera.Core.Caching, Version=2.1.0.0, Culture=neutral, PublicKeyToken=33086db60a481256, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Primavera.Core.10.0010.0000.2500\lib\Primavera.Core.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="Primavera.Core.Interop, Version=2.1.0.0, Culture=neutral, PublicKeyToken=33086db60a481256, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Primavera.Core.10.0010.0000.2500\lib\Primavera.Core.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="Primavera.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=33086db60a481256, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Primavera.CoreLib.4.0.2.14\lib\net461\Primavera.CoreLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Primavera.CoreLib.Interop, Version=4.0.0.0, Culture=neutral, PublicKeyToken=33086db60a481256, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Primavera.CoreLib.Interop.4.0.2.14\lib\net461\Primavera.CoreLib.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="Primavera.Dashboards.Engine, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Primavera.Dashboards.Engine.10.10.0.2502\lib\net471\Primavera.Dashboards.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="Primavera.Dashboards.Engine.Interfaces, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Primavera.Dashboards.Engine.Interfaces.10.10.0.2502\lib\net471\Primavera.Dashboards.Engine.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Primavera.Dashboards.Entities, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Primavera.Dashboards.Entities.10.10.0.2502\lib\net471\Primavera.Dashboards.Entities.dll</HintPath>
+    </Reference>
+    <Reference Include="Primavera.Dashboards.UserInterface, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Primavera.Dashboards.UserInterface.10.10.0.2502\lib\net471\Primavera.Dashboards.UserInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="Primavera.Extensibility.Attributes, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Primavera.Extensibility.Attributes.10.10.0.2502\lib\net471\Primavera.Extensibility.Attributes.dll</HintPath>
+    </Reference>
+    <Reference Include="Primavera.Extensibility.Base, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\Primavera.Extensibility.Base.10.10.0.2504\lib\net471\Primavera.Extensibility.Base.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Primavera.Extensibility.BusinessEntities, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Primavera.Extensibility.BusinessEntities.10.10.0.2502\lib\net471\Primavera.Extensibility.BusinessEntities.dll</HintPath>
+    </Reference>
+    <Reference Include="Primavera.Extensibility.Constants, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Primavera.Extensibility.Constants.10.10.0.2502\lib\net471\Primavera.Extensibility.Constants.dll</HintPath>
+    </Reference>
+    <Reference Include="Primavera.Extensibility.CustomForm, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\Primavera.Extensibility.CustomForm.10.10.0.2504\lib\net471\Primavera.Extensibility.CustomForm.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Primavera.Extensibility.CustomTab, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\Primavera.Extensibility.CustomTab.10.10.0.2504\lib\net471\Primavera.Extensibility.CustomTab.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Primavera.Extensibility.Extensions, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Primavera.Extensibility.Extensions.10.10.0.2502\lib\net471\Primavera.Extensibility.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Primavera.Extensibility.Integration, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\Primavera.Extensibility.Integration.10.10.0.2504\lib\net471\Primavera.Extensibility.Integration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Primavera.Extensibility.Patterns, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Primavera.Extensibility.Patterns.10.10.0.2502\lib\net471\Primavera.Extensibility.Patterns.dll</HintPath>
+    </Reference>
+    <Reference Include="Primavera.Hydrogen.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=33086db60a481256, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Primavera.Hydrogen.Core.2.0.1.182\lib\netstandard2.0\Primavera.Hydrogen.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Primavera.Hydrogen.IdentityModel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=33086db60a481256, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Primavera.Hydrogen.IdentityModel.2.0.1.182\lib\netstandard2.0\Primavera.Hydrogen.IdentityModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Primavera.Hydrogen.Pipelines, Version=2.0.0.0, Culture=neutral, PublicKeyToken=33086db60a481256, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Primavera.Hydrogen.Pipelines.2.0.1.182\lib\netstandard2.0\Primavera.Hydrogen.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="Primavera.Hydrogen.Rest, Version=2.0.0.0, Culture=neutral, PublicKeyToken=33086db60a481256, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Primavera.Hydrogen.Rest.2.0.1.182\lib\netstandard2.0\Primavera.Hydrogen.Rest.dll</HintPath>
+    </Reference>
+    <Reference Include="Primavera.Hydrogen.Rest.ClientRuntime, Version=1.0.0.0, Culture=neutral, PublicKeyToken=33086db60a481256, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Primavera.Hydrogen.Rest.ClientRuntime.1.2.1.99\lib\netstandard2.0\Primavera.Hydrogen.Rest.ClientRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="Primavera.Lithium.DataLookup, Version=2.0.0.0, Culture=neutral, PublicKeyToken=33086db60a481256, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Primavera.Lithium.DataLookup.2.0.1.5\lib\netstandard2.0\Primavera.Lithium.DataLookup.dll</HintPath>
+    </Reference>
+    <Reference Include="Primavera.Lithium.DataLookup.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=33086db60a481256, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Primavera.Lithium.DataLookup.Models.1.1.0.18\lib\netstandard2.0\Primavera.Lithium.DataLookup.Models.dll</HintPath>
+    </Reference>
+    <Reference Include="Primavera.Lithium.DataLookup.VatNumber.Validators, Version=2.0.0.0, Culture=neutral, PublicKeyToken=33086db60a481256, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Primavera.Lithium.DataLookup.VatNumber.Validators.2.0.0.3\lib\netstandard2.0\Primavera.Lithium.DataLookup.VatNumber.Validators.dll</HintPath>
+    </Reference>
+    <Reference Include="Primavera.Lithium.ECommerceConnect, Version=2.0.0.0, Culture=neutral, PublicKeyToken=33086db60a481256, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Primavera.Lithium.ECommerceConnect.2.0.3.179\lib\net471\Primavera.Lithium.ECommerceConnect.dll</HintPath>
+    </Reference>
+    <Reference Include="Primavera.Lithium.HubServices, Version=2.0.0.0, Culture=neutral, PublicKeyToken=33086db60a481256, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Primavera.Lithium.HubServices.2.0.1.8\lib\netstandard2.0\Primavera.Lithium.HubServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Primavera.Lithium.HubServices.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=33086db60a481256, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Primavera.Lithium.HubServices.Models.1.1.0.10\lib\netstandard2.0\Primavera.Lithium.HubServices.Models.dll</HintPath>
+    </Reference>
+    <Reference Include="Primavera.Manufacturing.Scheduler100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\Primavera.Manufacturing.Scheduler100.10.10.0.2506\lib\net471\Primavera.Manufacturing.Scheduler100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Primavera.Platform.Collections, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\Primavera.Platform.Collections.10.10.0.2531\lib\net471\Primavera.Platform.Collections.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Primavera.Platform.CoreLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=33086db60a481256, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Primavera.Platform.10.0010.0000.2500\lib\Primavera.Platform.CoreLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Primavera.Platform.CoreServices100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\Primavera.Platform.CoreServices100.10.10.0.2531\lib\net471\Primavera.Platform.CoreServices100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Primavera.Platform.Exceptions, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\Primavera.Platform.Exceptions.10.10.0.2531\lib\net471\Primavera.Platform.Exceptions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Primavera.Platform.Extensibility.Controls">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Primavera.Platform.Globalizacao, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\Primavera.Platform.Globalizacao.10.10.0.2531\lib\net471\Primavera.Platform.Globalizacao.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Primavera.Platform.Helpers, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\Primavera.Platform.Helpers.10.10.0.2531\lib\net471\Primavera.Platform.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Primavera.Platform.Interop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e076e239d0e78a42, processorArchitecture=x86">
+      <HintPath>..\..\..\packages\Primavera.Platform.10.0010.0000.2500\lib\Primavera.Platform.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="Primavera.Platform.MapServices.UI100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Primavera.Platform.MapServices.UI100.10.10.0.2513\lib\net471\Primavera.Platform.MapServices.UI100.dll</HintPath>
+    </Reference>
+    <Reference Include="Primavera.Platform.MapServices100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Primavera.Platform.MapServices100.10.10.0.2513\lib\net471\Primavera.Platform.MapServices100.dll</HintPath>
+    </Reference>
+    <Reference Include="Primavera.Platform.NetServices100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\Primavera.Platform.NetServices100.10.10.0.2531\lib\net471\Primavera.Platform.NetServices100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Primavera.Platform.Reports.Validation100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\Primavera.Platform.Reports.Validation100.10.10.0.2531\lib\net471\Primavera.Platform.Reports.Validation100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Primavera.Platform.Reports100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\Primavera.Platform.Reports100.10.10.0.2531\lib\net471\Primavera.Platform.Reports100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Primavera.Platform.Smtp, Version=10.0.0.0, Culture=neutral, PublicKeyToken=33086db60a481256">
+      <HintPath>..\..\..\packages\Primavera.Platform.Smtp.10.10.0.2531\lib\net471\Primavera.Platform.Smtp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Primavera.Platform.UserControls100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\Primavera.Platform.UserControls100.10.10.0.2531\lib\net471\Primavera.Platform.UserControls100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PrimaveraSupportNetSupport, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\PrimaveraSupportNetSupport.10.0010.0000.2502\lib\net471\PrimaveraSupportNetSupport.dll</HintPath>
+    </Reference>
+    <Reference Include="PriTextBoxF4100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\PriTextBoxF4100.10.10.0.2531\lib\net471\PriTextBoxF4100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PriTextBoxF4NET100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\PriTextBoxF4NET100.10.10.0.2531\lib\net471\PriTextBoxF4NET100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PrjBE100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\PrjBE100.10.10.0.2504\lib\net471\PrjBE100.dll</HintPath>
+    </Reference>
+    <Reference Include="RhpBE100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\RhpBE100.10.10.0.2513\lib\net471\RhpBE100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="saxon9he-api, Version=9.9.1.2, Culture=neutral, PublicKeyToken=e1fdd002d5083fe6, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Saxon-HE.9.9.1.2\lib\net40\saxon9he-api.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleInjector, Version=3.1.2.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\SimpleInjector.10.0010.0000.2500\lib\SimpleInjector.dll</HintPath>
+    </Reference>
+    <Reference Include="StdBackgrWorker, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\StdBackgrWorker.10.10.0.2531\lib\net471\StdBackgrWorker.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StdBE100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\StdBE100.10.10.0.2531\lib\net471\StdBE100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StdBESql100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\StdBESql100.10.10.0.2531\lib\net471\StdBESql100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StdBrandingInfo100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\StdBrandingInfo100.10.10.0.2531\lib\net471\StdBrandingInfo100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StdBSSql100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\StdBSSql100.10.10.0.2531\lib\net471\StdBSSql100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StdClasses100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\StdClasses100.10.10.0.2531\lib\net471\StdClasses100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StdControls100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\StdControls100.10.10.0.2531\lib\net471\StdControls100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StdDSSql100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\StdDSSql100.10.10.0.2531\lib\net471\StdDSSql100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StdDTPicker100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\StdDTPicker100.10.10.0.2531\lib\net471\StdDTPicker100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StdDTPickerNET100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\StdDTPickerNET100.10.10.0.2531\lib\net471\StdDTPickerNET100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="STDMaskNumCtl, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\STDMaskNumCtl.10.10.0.2531\lib\net471\STDMaskNumCtl.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StdPlatBE100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\StdPlatBE100.10.10.0.2531\lib\net471\StdPlatBE100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StdPlatBS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\StdPlatBS100.10.10.0.2531\lib\net471\StdPlatBS100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StdPlatDS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\StdPlatDS100.10.10.0.2531\lib\net471\StdPlatDS100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StdServices100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\StdServices100.10.10.0.2531\lib\net471\StdServices100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StdUpgCDUs100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\StdUpgCDUs100.10.10.0.2531\lib\net471\StdUpgCDUs100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StpBE100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\StpBE100.10.10.0.2501\lib\net471\StpBE100.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\System.ComponentModel.Annotations.4.7.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>_external\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6">
+      <HintPath>_external\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq">
+      <HintPath>_external\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\System.Diagnostics.DiagnosticSource.4.6.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\System.IdentityModel.Tokens.Jwt.5.2.4\lib\net451\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO" />
+    <Reference Include="System.IO.Compression, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL" />
+    <Reference Include="System.Linq" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.AspNet.WebApi.Client.5.2.6\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Net.WebSockets" />
+    <Reference Include="System.Net.WebSockets.Client" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\System.Runtime.CompilerServices.Unsafe.4.7.1\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security.Cryptography.Encoding" />
+    <Reference Include="System.Security.Cryptography.Primitives" />
+    <Reference Include="System.Security.Cryptography.X509Certificates" />
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Text.Encodings.Web, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\System.Text.Encodings.Web.4.7.1\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\System.Text.Json.4.7.2\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.AspNet.WebApi.Core.5.2.6\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TesBE100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\TesBE100.10.10.0.2501\lib\net471\TesBE100.dll</HintPath>
+    </Reference>
+    <Reference Include="TTEBE100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\TTEBE100.10.10.0.2501\lib\net471\TTEBE100.dll</HintPath>
+    </Reference>
+    <Reference Include="UpgradeHelpers.DB.ADO, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\UpgradeHelpers.DB.ADO.10.0010.0000.2502\lib\net471\UpgradeHelpers.DB.ADO.dll</HintPath>
+    </Reference>
+    <Reference Include="UpgradeHelpers.DB.ADO.Controls, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\UpgradeHelpers.DB.ADO.Controls.10.0010.0000.2502\lib\net471\UpgradeHelpers.DB.ADO.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="UpgradeHelpers.DB.Essentials, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\UpgradeHelpers.DB.Essentials.10.0010.0000.2502\lib\net471\UpgradeHelpers.DB.Essentials.dll</HintPath>
+    </Reference>
+    <Reference Include="UpgradeHelpers.DB.Essentials.Controls, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\UpgradeHelpers.DB.Essentials.Controls.10.0010.0000.2502\lib\net471\UpgradeHelpers.DB.Essentials.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="UpgradeHelpers.FontHelper, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\UpgradeHelpers.FontHelper.10.0010.0000.2502\lib\net471\UpgradeHelpers.FontHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="UpgradeHelpers.FpSpread, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\UpgradeHelpers.FpSpread.10.0010.0000.2502\lib\net471\UpgradeHelpers.FpSpread.dll</HintPath>
+    </Reference>
+    <Reference Include="UpgradeHelpers.Gui, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\UpgradeHelpers.Gui.10.0010.0000.2502\lib\net471\UpgradeHelpers.Gui.dll</HintPath>
+    </Reference>
+    <Reference Include="UpgradeHelpers.Gui.ContainerHelper, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\UpgradeHelpers.Gui.ContainerHelper.10.0010.0000.2502\lib\net471\UpgradeHelpers.Gui.ContainerHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="UpgradeHelpers.Gui.Graphics, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\UpgradeHelpers.Gui.Graphics.10.0010.0000.2502\lib\net471\UpgradeHelpers.Gui.Graphics.dll</HintPath>
+    </Reference>
+    <Reference Include="UpgradeHelpers.SupportHelper, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\UpgradeHelpers.SupportHelper.10.0010.0000.2502\lib\net471\UpgradeHelpers.SupportHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="UpgradeHelpers.Utils, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\UpgradeHelpers.Utils.10.0010.0000.2502\lib\net471\UpgradeHelpers.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="UpgradeHelpers.Utils.ReflectionHelper, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\UpgradeHelpers.Utils.ReflectionHelper.10.0010.0000.2502\lib\net471\UpgradeHelpers.Utils.ReflectionHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="UpgradeHelpers.VB, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\UpgradeHelpers.VB.10.0010.0000.2502\lib\net471\UpgradeHelpers.VB.dll</HintPath>
+    </Reference>
+    <Reference Include="VndBE100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <HintPath>..\..\..\packages\VndBE100.10.10.0.2511\lib\net471\VndBE100.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Zxcvbn, Version=1.0.1.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Zxcvbn.10.0010.0000.2500\lib\Zxcvbn.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Helpers\MapHelper.cs" />
+    <Compile Include="Properties\AssemblyInfoCommon.cs" />
+    <Compile Include="UserControls\TabMapBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\TabMapBase.Designer.cs">
+      <DependentUpon>TabMapBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TabMapCustomers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\TabMapCustomers.Designer.cs">
+      <DependentUpon>TabMapCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TabMapOthers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\TabMapOthers.designer.cs">
+      <DependentUpon>TabMapOthers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TabMapSuppliers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\TabMapSuppliers.Designer.cs">
+      <DependentUpon>TabMapSuppliers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\MapManager.cs" />
+    <Compile Include="Factory\MapFactory.cs" />
+    <Compile Include="Providers\BingMap.cs" />
+    <Compile Include="Providers\GoogleMap.cs" />
+    <Compile Include="Providers\OSMMap.cs" />
+    <Compile Include="Entities\RouteMarker.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Map.cs" />
+    <Compile Include="Entities\Route.cs" />
+    <Compile Include="Entities\MapServer.cs" />
+    <Compile Include="Entities\Marker.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UserControls\TabMapBase.resx">
+      <DependentUpon>TabMapBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\TabMapCustomers.resx">
+      <DependentUpon>TabMapCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\TabMapOthers.resx">
+      <DependentUpon>TabMapOthers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\TabMapSuppliers.resx">
+      <DependentUpon>TabMapSuppliers.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Functions\MapServicespt-PT.htm" />
+    <Content Include="Functions\Scripts\geolocator.js" />
+    <Content Include="Functions\VEMap.htm" />
+    <Content Include="icon-datetime-128.png" />
+    <Content Include="Images\adm_inicializacaoplataforma_16.png" />
+    <Content Include="Images\armazem_geracao_localizacao_16.png" />
+    <Content Include="Images\armazem_localizacao_16.png" />
+    <Content Include="Images\grl_limpar_16.png" />
+    <Content Include="Images\imgSave.png" />
+    <Content Include="Images\Operacao_16.png" />
+    <Content Include="Images\XIS.png" />
+    <Content Include="InteropUserControl.bmp" />
+    <Content Include="InteropUserControl.rc" />
+    <Content Include="README.txt" />
+    <Content Include="Resources\Agendamento_Manual_16.png" />
+    <Content Include="Resources\Agendamento_Manual_32.png" />
+    <Content Include="Resources\Agendamento_Recorrencia_16.png" />
+    <Content Include="Resources\Agendamento_Recorrencia_32.png" />
+    <Content Include="Resources\Agenda_Tecnico_16.png" />
+    <Content Include="Resources\Agenda_Tecnico_32.png" />
+    <Content Include="Resources\attach.png" />
+    <Content Include="Resources\cancel.png" />
+    <Content Include="Resources\Confirmar_Intervencao_16.png" />
+    <Content Include="Resources\Confirmar_Intervencao_32.png" />
+    <Content Include="Resources\Distribuicao_Processos_16.png" />
+    <Content Include="Resources\Distribuicao_Processos_32.png" />
+    <Content Include="Resources\edit-alignment-center.png" />
+    <Content Include="Resources\edit-alignment-justify.png" />
+    <Content Include="Resources\edit-alignment-right.png" />
+    <Content Include="Resources\edit-alignment.png" />
+    <Content Include="Resources\edit-backcolor.png" />
+    <Content Include="Resources\edit-bold.png" />
+    <Content Include="Resources\edit-color.png" />
+    <Content Include="Resources\edit-image.png" />
+    <Content Include="Resources\edit-indent.png" />
+    <Content Include="Resources\edit-italic.png" />
+    <Content Include="Resources\edit-list.png" />
+    <Content Include="Resources\edit-outdent.png" />
+    <Content Include="Resources\edit-underline.png" />
+    <Content Include="Resources\Elevation_Off.png" />
+    <Content Include="Resources\Elevation_On.png" />
+    <Content Include="Resources\emailIcon.ico" />
+    <Content Include="Resources\Erpbg00.jpg" />
+    <Content Include="Resources\Erpbg02.jpg" />
+    <Content Include="Resources\Erpbg03.jpg" />
+    <Content Include="Resources\find.png" />
+    <Content Include="Resources\grl_informadb_16.png" />
+    <Content Include="Resources\grl_informadb_32.png" />
+    <Content Include="Resources\Images\InteropUserControl.bmp" />
+    <Content Include="Resources\imgExpand.png" />
+    <Content Include="Resources\Intervencao_Agendada_16.png" />
+    <Content Include="Resources\Intervencao_Agendada_32.png" />
+    <Content Include="Resources\Intervencoes_16.png" />
+    <Content Include="Resources\Intervencoes_32.png" />
+    <Content Include="Resources\minusIcon.png" />
+    <Content Include="Resources\Objetos_Assistencia_16.png" />
+    <Content Include="Resources\Objetos_Assistencia_32.png" />
+    <Content Include="Resources\Pedidos_Assistencia_16.png" />
+    <Content Include="Resources\Pedidos_Assistencia_32.png" />
+    <Content Include="Resources\Plano_Intervencoes_16.png" />
+    <Content Include="Resources\Plano_Intervencoes_32.png" />
+    <Content Include="Resources\plusIcon.png" />
+    <Content Include="Resources\pontos_venda_16.png" />
+    <Content Include="Resources\pontos_venda_32.png" />
+    <Content Include="Resources\precos_moeda_estrangeira_16.png" />
+    <Content Include="Resources\precos_moeda_estrangeira_32.png" />
+    <Content Include="Resources\Processos_16.png" />
+    <Content Include="Resources\Processos_32.png" />
+    <Content Include="Resources\Processos_Assistencia_16.png" />
+    <Content Include="Resources\Processos_Assistencia_32.png" />
+    <Content Include="Resources\Questoes_Frequentes_16.png" />
+    <Content Include="Resources\Questoes_Frequentes_32.png" />
+    <Content Include="Resources\replace.png" />
+    <Content Include="Resources\saveSignature.png" />
+    <Content Include="Resources\sendEmail.png" />
+    <Content Include="SQL\InstallScript.sql" />
+    <Content Include="_external\GMap.NET.Core.dll" />
+    <Content Include="_external\GMap.NET.WindowsForms.dll" />
+    <Content Include="_external\System.Data.SQLite.dll" />
+    <Content Include="_external\System.Data.SQLite.EF6.dll" />
+    <Content Include="_external\System.Data.SQLite.Linq.dll" />
+    <Content Include="_external\System.Security.Claims.dll" />
+    <Content Include="_external\System.Security.Principal.Windows.dll" />
+    <Content Include="_external\x64\SQLite.Interop.dll" />
+    <Content Include="_external\x86\SQLite.Interop.dll" />
+    <EmbeddedResource Include="properties\resources.en.resx">
+      <DependentUpon>resources.resx</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="properties\resources.fr.resx">
+      <DependentUpon>resources.resx</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="properties\resources.pt-cl.resx">
+      <DependentUpon>resources.resx</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="properties\resources.es.resx">
+      <DependentUpon>resources.resx</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="..\..\..\packages\Microsoft.Azure.Services.AppAuthentication.1.0.3\build\Microsoft.Azure.Services.AppAuthentication.targets" Condition="Exists('..\..\..\packages\Microsoft.Azure.Services.AppAuthentication.1.0.3\build\Microsoft.Azure.Services.AppAuthentication.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\..\packages\Microsoft.Azure.Services.AppAuthentication.1.0.3\build\Microsoft.Azure.Services.AppAuthentication.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\packages\Microsoft.Azure.Services.AppAuthentication.1.0.3\build\Microsoft.Azure.Services.AppAuthentication.targets'))" />
+    <Error Condition="!Exists('..\..\..\packages\Microsoft.SqlServer.SqlManagementObjects.140.17224.0\build\net40\Microsoft.SqlServer.SqlManagementObjects.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\packages\Microsoft.SqlServer.SqlManagementObjects.140.17224.0\build\net40\Microsoft.SqlServer.SqlManagementObjects.targets'))" />
+  </Target>
+  <Import Project="..\..\..\packages\Microsoft.SqlServer.SqlManagementObjects.140.17224.0\build\net40\Microsoft.SqlServer.SqlManagementObjects.targets" Condition="Exists('..\..\..\packages\Microsoft.SqlServer.SqlManagementObjects.140.17224.0\build\net40\Microsoft.SqlServer.SqlManagementObjects.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -27,6 +27,7 @@ This repository is organized in two sections, in the section **samples** you wil
 | [Custom Tab](samples/Custom%20Tabs) | Add a custom tab to customer entity. A Tab with goole maps integration. |
 | [Custom Ribbon](samples/Custom%20Ribbon) | Add's a new TAB on the ERP Ribbon. |
 | [Primavera Logger ](samples/Primavera%20Logger)| Log all the errors and events of your extensibility project. |
+| [Primavera SDK](samples/Primavera%20SDK) | Learn how to use the SDK PriGrid and F4 controls. |
 | [Primavera.RelatedInfo](samples/Primavera.RelatedInfo) | Adds a new control to the invoice context panel to show the customer pending documents.|
 
 ### In Implementation Section
@@ -34,7 +35,7 @@ This repository is organized in two sections, in the section **samples** you wil
 | Sample                                 | Descripition     |
 | :------------------------------------- | :--------------- |
 | [Fito Farmaceiticos](Implementation/SIFitofarmaceuticos) | Implementation Suggetion that handles the "Fitofarmacêuticos" portuguese legal requirements in a PRIMAVERA ERP V10 environment. |
-| [ECHO Sample Topic](Implementation/DevelopersNetworkTopic) | Implementation Suggetion of a sample topic for the ECHO bot (10.10 SR1 version). |
+| [Developers Network ECHO Topic](Implementation\Primavera.Bot.DevelopersNetworkTopicSR1) | Implementation suggestion for an ECHO topic. |
 
 ## Contributing and Feedback
 

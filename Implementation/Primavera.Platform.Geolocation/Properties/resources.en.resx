@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="RES_DeleteMapMarker" xml:space="preserve">
+    <value>Do you wish to remove the marker: [{0}] from the report?</value>
+  </data>
+  <data name="RES_DeleteRoute" xml:space="preserve">
+    <value>Do you wish to delete the route: [{0}] from your list?</value>
+  </data>
+  <data name="RES_DeleteUserMarker" xml:space="preserve">
+    <value>Do you wish to delete the selected marker: [{0}] from your list?</value>
+  </data>
+  <data name="RES_DeleteUserRouteMarker" xml:space="preserve">
+    <value>This marker is used in at least one route. Do you wish to delete the selected marker: [{0}] from your list?</value>
+  </data>
+  <data name="RES_GeolocationWarning" xml:space="preserve">
+    <value>To use the Geolocation features you must select the type of report from the options list.</value>
+  </data>
+  <data name="RES_GeolocationWarningTitle" xml:space="preserve">
+    <value>INFORMATION</value>
+  </data>
+  <data name="RES_MarkerPOI" xml:space="preserve">
+    <value>Do you wish to save this marker as a point of interest?</value>
+  </data>
+  <data name="RES_RouteUnsavedMarker" xml:space="preserve">
+    <value>It is not possible to save the route. You need to save the marker {0}.</value>
+  </data>
+  <data name="RES_RouteUnsavedMarkers" xml:space="preserve">
+    <value>It is not possible to save the route because there are unsaved markers. Do you wish to save them?</value>
+  </data>
+  <data name="RES_SaveMarker" xml:space="preserve">
+    <value>Fill in the desired name for the marker.</value>
+  </data>
+  <data name="RES_SaveMarkerTitle" xml:space="preserve">
+    <value>Save Marker</value>
+  </data>
+  <data name="RES_SaveRoute" xml:space="preserve">
+    <value>Fill in the desired name for the route.</value>
+  </data>
+  <data name="RES_SaveRouteCalculateWarning" xml:space="preserve">
+    <value>To save a route, you need to calculate a route.</value>
+  </data>
+  <data name="RES_SaveRouteMarkersWarning" xml:space="preserve">
+    <value>To save a route, you need to have markers.</value>
+  </data>
+  <data name="RES_SaveRouteNameWarning" xml:space="preserve">
+    <value>It is not possible to save the route. You need to name it.</value>
+  </data>
+  <data name="RES_SaveRouteTitle" xml:space="preserve">
+    <value>Save Route</value>
+  </data>
+  <data name="RES_ServerKeyName" xml:space="preserve">
+    <value>Please insert the {0} Server key.</value>
+  </data>
+  <data name="RES_ServerKeyTitle" xml:space="preserve">
+    <value>Set up Report Server</value>
+  </data>
+  <data name="RES_TwoMarkerWarning" xml:space="preserve">
+    <value>To draw a route, you need at least 2 markers.</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+</root>
