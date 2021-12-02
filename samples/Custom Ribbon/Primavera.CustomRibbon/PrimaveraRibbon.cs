@@ -40,7 +40,7 @@ namespace Primavera.CustomRibbon
 
                 switch (Id)
                 {
-                    case RibbonConstants.cIDBUTTON1:
+                    case RibbonConstants.cTAB1_GROUP1_IDBUTTON1:
                         //You must change the application path.
                         Process.Start(@"C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\devenv.exe");
                         break;
@@ -48,7 +48,7 @@ namespace Primavera.CustomRibbon
             }
             catch (System.Exception ex)
             {
-               PSO.Dialogos.MostraAviso("The file don't exist.",StdBSTipos.IconId.PRI_Informativo,ex.Message);
+               PSO.MensagensDialogos.MostraAviso("The file don't exist.",StdBSTipos.IconId.PRI_Informativo,ex.Message);
             }
         }
 
@@ -65,7 +65,8 @@ namespace Primavera.CustomRibbon
             // Register the add-in.
             CriateTab();
             CreateGroup();
-            CreateGroupButton32(RibbonConstants.cIDBUTTON1, "Visual Studio", Resources.VS2017_256x256);
+            CreateGroupButton32(RibbonConstants.cIDTAB1, RibbonConstants.cIDTAB1_GROUP1, RibbonConstants.cTAB1_GROUP1_IDBUTTON1, "Visual Studio 2017", Resources.VS2017_256x256);
+            CreateGroupButton32(RibbonConstants.cIDTAB2, RibbonConstants.cIDTAB2_GROUP1, RibbonConstants.cTAB2_GROUP1_IDBUTTON1, "Visual Studio 2019", Resources.VS2017_256x256);
         }
 
         #endregion
@@ -74,17 +75,19 @@ namespace Primavera.CustomRibbon
 
         private void CriateTab()
         {
-           this.PSO.Ribbon.CriaRibbonTab("PRIMAVERA", RibbonConstants.cIDTAB, 10);
+           this.PSO.Ribbon.CriaRibbonTab("TAB 1", RibbonConstants.cIDTAB1, 10);
+           this.PSO.Ribbon.CriaRibbonTab("TAB 2", RibbonConstants.cIDTAB2, 10);
         }
 
         private void CreateGroup()
         {
-            this.PSO.Ribbon.CriaRibbonGroup(RibbonConstants.cIDTAB, "Extensibility", RibbonConstants.cIDGROUP);
+            this.PSO.Ribbon.CriaRibbonGroup(RibbonConstants.cIDTAB1, "Extensibility 1", RibbonConstants.cIDTAB1_GROUP1);
+            this.PSO.Ribbon.CriaRibbonGroup(RibbonConstants.cIDTAB2, "Extensibility 2", RibbonConstants.cIDTAB2_GROUP1);
         }
 
-        private void CreateGroupButton32(string buttonId, string buttonDescription, Image buttonImage )
+        private void CreateGroupButton32(string tabId,string groupId, string buttonId, string buttonDescription, Image buttonImage )
         {
-            this.PSO.Ribbon.CriaRibbonButton(RibbonConstants.cIDTAB, RibbonConstants.cIDGROUP, buttonId, buttonDescription, true, buttonImage);
+            this.PSO.Ribbon.CriaRibbonButton(tabId, groupId, buttonId, buttonDescription, true, buttonImage);
         }
 
         #endregion
