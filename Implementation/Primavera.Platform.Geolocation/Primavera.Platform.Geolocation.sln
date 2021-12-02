@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31410.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Primavera.Platform.Geolocation", "Primavera.Platform.Geolocation.csproj", "{B69DE779-7C44-4ACC-ABF4-E73FC082A0CB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GMap.NET.Core", "GMap.NET\GMap.NET.Core\GMap.NET.Core.csproj", "{05952727-0887-4ABF-8C7B-A3D6ABF3400F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GMap.NET.WindowsForms", "GMap.NET\GMap.NET.WindowsForms\GMap.NET.WindowsForms.csproj", "{2E7B3083-AEB6-484E-BAF3-76FB09B853F9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B69DE779-7C44-4ACC-ABF4-E73FC082A0CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B69DE779-7C44-4ACC-ABF4-E73FC082A0CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B69DE779-7C44-4ACC-ABF4-E73FC082A0CB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B69DE779-7C44-4ACC-ABF4-E73FC082A0CB}.Debug|x86.Build.0 = Debug|Any CPU
+		{B69DE779-7C44-4ACC-ABF4-E73FC082A0CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B69DE779-7C44-4ACC-ABF4-E73FC082A0CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B69DE779-7C44-4ACC-ABF4-E73FC082A0CB}.Release|x86.ActiveCfg = Release|Any CPU
+		{B69DE779-7C44-4ACC-ABF4-E73FC082A0CB}.Release|x86.Build.0 = Release|Any CPU
+		{05952727-0887-4ABF-8C7B-A3D6ABF3400F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05952727-0887-4ABF-8C7B-A3D6ABF3400F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05952727-0887-4ABF-8C7B-A3D6ABF3400F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{05952727-0887-4ABF-8C7B-A3D6ABF3400F}.Debug|x86.Build.0 = Debug|Any CPU
+		{05952727-0887-4ABF-8C7B-A3D6ABF3400F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05952727-0887-4ABF-8C7B-A3D6ABF3400F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05952727-0887-4ABF-8C7B-A3D6ABF3400F}.Release|x86.ActiveCfg = Release|Any CPU
+		{05952727-0887-4ABF-8C7B-A3D6ABF3400F}.Release|x86.Build.0 = Release|Any CPU
+		{2E7B3083-AEB6-484E-BAF3-76FB09B853F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E7B3083-AEB6-484E-BAF3-76FB09B853F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E7B3083-AEB6-484E-BAF3-76FB09B853F9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2E7B3083-AEB6-484E-BAF3-76FB09B853F9}.Debug|x86.Build.0 = Debug|Any CPU
+		{2E7B3083-AEB6-484E-BAF3-76FB09B853F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E7B3083-AEB6-484E-BAF3-76FB09B853F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E7B3083-AEB6-484E-BAF3-76FB09B853F9}.Release|x86.ActiveCfg = Release|Any CPU
+		{2E7B3083-AEB6-484E-BAF3-76FB09B853F9}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DC9A5BD0-7F6E-4085-8284-AEC87EEAB1EF}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.primaverabss.com/tfs/p.tec.erp
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Primavera.Platform.Geolocation.csproj
+		SccProjectName1 = Primavera.Platform.Geolocation
+		SccLocalPath1 = Primavera.Platform.Geolocation
+		SccProjectUniqueName2 = GMap.NET\\GMap.NET.Core\\GMap.NET.Core.csproj
+		SccProjectName2 = GMap.NET/GMap.NET.Core
+		SccLocalPath2 = GMap.NET\\GMap.NET.Core
+		SccProjectUniqueName3 = GMap.NET\\GMap.NET.WindowsForms\\GMap.NET.WindowsForms.csproj
+		SccProjectName3 = GMap.NET/GMap.NET.WindowsForms
+		SccLocalPath3 = GMap.NET\\GMap.NET.WindowsForms
+	EndGlobalSection
+EndGlobal
