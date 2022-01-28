@@ -29,6 +29,7 @@ This repository is organized in two sections, in the section **samples** you wil
 | [Primavera Logger ](samples/Primavera%20Logger)| Log all the errors and events of your extensibility project. |
 | [Primavera SDK](samples/Primavera%20SDK) | Learn how to use the SDK PriGrid and F4 controls. |
 | [Primavera.RelatedInfo](samples/Primavera.RelatedInfo) | Adds a new control to the invoice context panel to show the customer pending documents.|
+| [ScaleSample](samples/ScaleSample) | Provides an empty sample for dealing with scale within POS.|
 
 ### In Implementation Section
 
