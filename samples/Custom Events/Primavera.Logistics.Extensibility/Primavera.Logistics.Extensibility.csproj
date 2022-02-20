@@ -49,6 +49,11 @@
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\PRIMAVERA\SG100\Apl\IVndBS100.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Primavera.Extensibility.Attributes, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\ERP10\ERP\Mainline\_Bin\Primavera.Extensibility.Attributes.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Primavera.Extensibility.BusinessEntities">
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\PRIMAVERA\SG100\Apl\Primavera.Extensibility.BusinessEntities.dll</HintPath>
       <Private>False</Private>
