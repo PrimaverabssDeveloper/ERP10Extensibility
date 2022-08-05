@@ -1,4 +1,4 @@
-# CIUS Extensibility
+# CIUS-PT Extensibility
 
 In PRIMAVERA ERP 10 is available a functionality that allows to convert sales documents, issued to customers who are public entities, in a document in XML format according to the Portuguese CIUS-PT model.
 
