@@ -35,7 +35,7 @@ This repository is organized in two sections, in the section **samples** you wil
 | Sample                                 | Descripition     |
 | :------------------------------------- | :--------------- |
 | [Fito Farmaceiticos](Implementation/SIFitofarmaceuticos) | Implementation Suggetion that handles the "Fitofarmacêuticos" portuguese legal requirements in a PRIMAVERA ERP V10 environment. |
-| [Developers Network ECHO Topic](Implementation\Primavera.Bot.DevelopersNetworkTopicSR1) | Implementation suggestion for an ECHO topic. |
+| [BOT Topic](Implementation/DevelopersNetworkTopic) | Implementation suggestion for an ECHO topic. |
 | [Geolocation Extension](Implementation/GeolocationExtension) | Implementation of the Geolocation extension for the ERP. |
 
 ## Contributing and Feedback
