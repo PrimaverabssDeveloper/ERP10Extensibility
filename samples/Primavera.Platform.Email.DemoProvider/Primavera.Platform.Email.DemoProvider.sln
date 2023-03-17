@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Primavera.Platform.Email.DemoProvider", "Primavera.Platform.Email.DemoProvider\Primavera.Platform.Email.DemoProvider.csproj", "{CD5BEE9A-8611-4632-8D13-4ADA8393F4EC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD5BEE9A-8611-4632-8D13-4ADA8393F4EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD5BEE9A-8611-4632-8D13-4ADA8393F4EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD5BEE9A-8611-4632-8D13-4ADA8393F4EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD5BEE9A-8611-4632-8D13-4ADA8393F4EC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {311F5886-20AA-4257-83E0-A073DA6D86E6}
+	EndGlobalSection
+EndGlobal
