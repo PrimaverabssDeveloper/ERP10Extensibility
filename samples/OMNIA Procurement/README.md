@@ -2,11 +2,15 @@
 
 OMNIA Procurement - Extensibility allows you to communicate Requisition and Purchasing documents to the OMNIA Portal.
 
+(The Omnia Procurement product is discontinued as of SR12. https://helpcenter.ila.cegid.com/v10/novidades/?news_id=135311#logistica)
+
 
 To use the Procurement template, it is necessary to Import and Configure the Procurement template
 
 Follow the steps here to Import template and configure:
-https://helpcenter.ila.cegid.com/v10/compras/omnia-procurement/artigo/importar-e-configurar-o-template-procurement/
+https://developers.ila.cegid.com/v10/recursos/omnia-procurement/
+
+Templates in the Templates folder
 
 
 Register the assembly as described in: 
