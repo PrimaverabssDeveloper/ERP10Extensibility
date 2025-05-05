@@ -49,7 +49,7 @@ namespace Primavera.Logistics.DrillDown
 
         private void toolClose_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             this.Dispose();
         }
         #endregion
