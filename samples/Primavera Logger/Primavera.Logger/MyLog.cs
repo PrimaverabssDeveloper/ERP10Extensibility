@@ -160,6 +160,18 @@ namespace Primavera.Logger
             LogErrors(message, extensibilityExceptions.Select(p => p.Exception).ToList(), errorSeverity);
         }
 
+        public void LogHardEviction(string message)
+        {
+        }
+
+        public void LogSoftEviction(string message)
+        {
+        }
+
+        public void LogTrace(string message)
+        {
+        }
+
         #endregion
     }
 }

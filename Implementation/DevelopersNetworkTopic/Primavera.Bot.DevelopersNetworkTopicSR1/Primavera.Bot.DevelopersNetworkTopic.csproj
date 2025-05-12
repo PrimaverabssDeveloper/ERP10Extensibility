@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -21,7 +21,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>c:\Program Files (x86)\PRIMAVERA\SG100\Apl\HUR\Plugins\Bot\DevelopersNetworkTopic\</OutputPath>
+    <OutputPath>Bin\Debug</OutputPath>
     <DefineConstants>TRACE;DEBUG;CODE_ANALYSIS</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -32,7 +32,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\..\..\..\..\..\..\Program Files %28x86%29\PRIMAVERA\SG100\Apl\HUR\Plugins\Bot\DevelopersNetworkTopic\</OutputPath>
+    <OutputPath>Bin\Release</OutputPath>
     <DefineConstants>TRACE;CODE_ANALYSIS;CODE_ANALYSIS</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -51,23 +51,23 @@
   <ItemGroup>
     <Reference Include="Primavera.Bot.Entities, Version=10.0.0.0, Culture=neutral, PublicKeyToken=33086db60a481256">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>c:\Program Files (x86)\PRIMAVERA\SG100\Apl\HUR\Plugins\Primavera.Bot.Entities.dll</HintPath>
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\HUR\Plugins\Primavera.Bot.Entities.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Primavera.Bot.Managers.Interfaces, Version=10.0.0.0, Culture=neutral, PublicKeyToken=33086db60a481256">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>c:\Program Files (x86)\PRIMAVERA\SG100\Apl\HUR\Plugins\Primavera.Bot.Managers.Interfaces.dll</HintPath>
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\HUR\Plugins\Primavera.Bot.Managers.Interfaces.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Primavera.Hurakan.BotHandlers">
-      <HintPath>c:\Program Files (x86)\PRIMAVERA\SG100\Apl\HUR\Plugins\Primavera.Hurakan.BotHandlers.dll</HintPath>
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\HUR\Plugins\Primavera.Hurakan.BotHandlers.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Primavera.Hurakan.Core">
-      <HintPath>c:\Program Files (x86)\PRIMAVERA\SG100\Apl\HUR\Primavera.Hurakan.Core.dll</HintPath>
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\HUR\Primavera.Hurakan.Core.dll</HintPath>
     </Reference>
     <Reference Include="Primavera.Hurakan.Handlers">
-      <HintPath>c:\Program Files (x86)\PRIMAVERA\SG100\Apl\HUR\Plugins\Primavera.Hurakan.Handlers.dll</HintPath>
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\HUR\Plugins\Primavera.Hurakan.Handlers.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />

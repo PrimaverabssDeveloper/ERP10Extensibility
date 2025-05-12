@@ -10,7 +10,6 @@ using StdBE100;
 using VndBE100;
 using CmpBE100;
 using BasBE100;
-using DevExpress.Utils.DirectXPaint;
 
 namespace SUGIMPL_OME.CrossCompany
 {
