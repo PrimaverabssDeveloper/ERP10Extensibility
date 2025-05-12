@@ -1,0 +1,465 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5A3D8B3A-015E-4CFF-94C2-DC736C65F800}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>primavera.extensibility.kits</RootNamespace>
+    <AssemblyName>primavera.extensibility.kits</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AdmAudit100">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\AdmAudit100.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="AdmBE100">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\AdmBE100.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="AdmBS100">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\AdmBS100.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="AdmDS100">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\AdmDS100.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="BasBE100">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\BasBE100.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="BasUS100">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\BasUS100.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.10.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\packages\Portable.BouncyCastle.1.8.10\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CblBE100">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\CblBE100.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CctBE100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <Private>False</Private>
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\CctBE100.dll</HintPath>
+    </Reference>
+    <Reference Include="CctBS100">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\Apl\CctBS100.dll</HintPath>
+    </Reference>
+    <Reference Include="CctDS100">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\Apl\CctDS100.dll</HintPath>
+    </Reference>
+    <Reference Include="CmpBE100">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\CmpBE100.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CmpBS100">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\CmpBS100.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CmpDS100">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\CmpDS100.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ConstantesPrimavera100">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\ConstantesPrimavera100.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CrmBE100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\CrmBE100.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CrmBS100">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\CrmBS100.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CrmDS100">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\CrmDS100.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ErpBE100">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\ErpBE100.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ErpBS100">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\ErpBS100.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ErpDS100">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\ErpDS100.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FuncoesComuns100">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\FuncoesComuns100.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FuncoesComunsBE100">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\FuncoesComunsBE100.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IBasBS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\IBasBS100.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ICblBS100">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\ICblBS100.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ICblDS100">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\ICblDS100.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ICctBS100">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\ICctBS100.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ICctDS100">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\ICctDS100.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ICmpBS100">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\ICmpBS100.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ICmpDS100">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\ICmpDS100.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ICrmBS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\ICrmBS100.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IintBS100">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\IintBS100.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IIntDS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\IIntDS100.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IInvBS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\IInvBS100.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IInvDS100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\IInvDS100.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IntBE100">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\IntBE100.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IntUS100">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\IntUS100.dll</HintPath>
+    </Reference>
+    <Reference Include="InvBE100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\InvBE100.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="InvBS100">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\InvBS100.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="InvDS100">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\InvDS100.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ITTEBS100">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\ITTEBS100.dll</HintPath>
+    </Reference>
+    <Reference Include="ITTEDS100">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\ITTEDS100.dll</HintPath>
+    </Reference>
+    <Reference Include="IVndBS100">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\IVndBS100.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MimeKit, Version=2.13.0.0, Culture=neutral, PublicKeyToken=bede1c8a46c66814, processorArchitecture=MSIL">
+      <HintPath>..\packages\MimeKit.2.13.0\lib\net47\MimeKit.dll</HintPath>
+    </Reference>
+    <Reference Include="Primavera.Extensibility.Accounting">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\Primavera.Extensibility.Accounting.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Primavera.Extensibility.AccountingServices">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\Primavera.Extensibility.AccountingServices.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Primavera.Extensibility.Attributes">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\Primavera.Extensibility.Attributes.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Primavera.Extensibility.Base">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\Primavera.Extensibility.Base.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Primavera.Extensibility.Budgeting">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\Primavera.Extensibility.Budgeting.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Primavera.Extensibility.BusinessEntities">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\Primavera.Extensibility.BusinessEntities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Primavera.Extensibility.CashManagement">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\Primavera.Extensibility.CashManagement.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Primavera.Extensibility.Constants">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\Primavera.Extensibility.Constants.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Primavera.Extensibility.ContactsOpportunities">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\Primavera.Extensibility.ContactsOpportunities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Primavera.Extensibility.ContractManagement">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\Primavera.Extensibility.ContractManagement.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Primavera.Extensibility.CustomCode">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\Primavera.Extensibility.CustomCode.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Primavera.Extensibility.CustomForm">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\Primavera.Extensibility.CustomForm.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Primavera.Extensibility.CustomTab">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\Primavera.Extensibility.CustomTab.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Primavera.Extensibility.ElectronicDataInterchange">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\Primavera.Extensibility.ElectronicDataInterchange.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Primavera.Extensibility.Engine">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\Primavera.Extensibility.Engine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Primavera.Extensibility.EquipmentsFixedAssets">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\Primavera.Extensibility.EquipmentsFixedAssets.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Primavera.Extensibility.Extensions">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\Primavera.Extensibility.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Primavera.Extensibility.HumanResources">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\Primavera.Extensibility.HumanResources.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Primavera.Extensibility.Integration">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\Primavera.Extensibility.Integration.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Primavera.Extensibility.Internal">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\Primavera.Extensibility.Internal.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Primavera.Extensibility.Inventory">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\Primavera.Extensibility.Inventory.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Primavera.Extensibility.Patterns, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\Primavera.Extensibility.Patterns.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Primavera.Extensibility.PayablesReceivables">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\Primavera.Extensibility.PayablesReceivables.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Primavera.Extensibility.Platform">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\Primavera.Extensibility.Platform.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Primavera.Extensibility.POS">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\Primavera.Extensibility.POS.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Primavera.Extensibility.Production">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\Primavera.Extensibility.Production.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Primavera.Extensibility.ProjectsServices">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\Primavera.Extensibility.ProjectsServices.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Primavera.Extensibility.Purchases">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\Primavera.Extensibility.Purchases.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Primavera.Extensibility.Sales">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\Primavera.Extensibility.Sales.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Primavera.Extensibility.TechnicalServices">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\Primavera.Extensibility.TechnicalServices.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Primavera.PIS100.Core">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\Primavera.PIS100.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Primavera.PIS100.Engine">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\Primavera.PIS100.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="Primavera.PIS100.Manufacturing">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\Primavera.PIS100.Manufacturing.dll</HintPath>
+    </Reference>
+    <Reference Include="Primavera.PIS100.Sales">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\Primavera.PIS100.Sales.dll</HintPath>
+    </Reference>
+    <Reference Include="Primavera.Platform.Collections">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\Primavera.Platform.Collections.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Primavera.Platform.Helpers">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\Primavera.Platform.Helpers.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PRISDK100">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\PRISDK100.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="StdBE100">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\StdBE100.dll</HintPath>
+    </Reference>
+    <Reference Include="StdBESql100">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\StdBESql100.dll</HintPath>
+    </Reference>
+    <Reference Include="StdPlatBE100">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\StdPlatBE100.dll</HintPath>
+    </Reference>
+    <Reference Include="StdPlatBS100">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\StdPlatBS100.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Linq" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Threading.Tasks" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TesBE100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <Private>False</Private>
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\TesBE100.dll</HintPath>
+    </Reference>
+    <Reference Include="TTEBE100">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\TTEBE100.dll</HintPath>
+    </Reference>
+    <Reference Include="TTEBS100">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\TTEBS100.dll</HintPath>
+    </Reference>
+    <Reference Include="UpgradeHelpers.DB.ADO, Version=10.0.0.0, Culture=neutral, PublicKeyToken=11cd844aca152173">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="VndBE100">
+      <HintPath>C:\Program Files\PRIMAVERA\SG100\Apl\VndBE100.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Code\BaseBS.cs" />
+    <Compile Include="Code\ComprasBS.cs" />
+    <Compile Include="Code\InternalBS.cs" />
+    <Compile Include="Code\InventarioBS.cs" />
+    <Compile Include="Code\VendasBS.cs" />
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Componente.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
