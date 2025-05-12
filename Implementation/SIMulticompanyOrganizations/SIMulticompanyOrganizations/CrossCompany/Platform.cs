@@ -1,5 +1,4 @@
 ﻿using BasBE100;
-using DevExpress.Utils.DPI;
 using ErpBS100;
 using StdBE100;
 using StdPlatBS100;

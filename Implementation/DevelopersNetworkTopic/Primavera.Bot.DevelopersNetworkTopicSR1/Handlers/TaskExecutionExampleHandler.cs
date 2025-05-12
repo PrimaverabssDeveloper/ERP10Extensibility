@@ -43,7 +43,7 @@ namespace Primavera.Bot.DevelopersNetworkTopic.Handlers
                 foreach (Enterprise enterprise in instance.Enterprises)
                 {
                     // Execute queries
-                    this.BuildConnectionString(instance.ServerSql, instance.LoginSql, instance.PasswordSql, "PRI" + enterprise.Code);
+                    this.SetConnectionParameters(instance.ServerSql, instance.LoginSql, instance.PasswordSql, "PRI" + enterprise.Code, instance.SqlCredential);
 
                     /*  Example - Changing Data in The company Database
                     string strSQL = "UPDATE Clientes SET Nome = @NomeCliente WHERE Cliente = @Cliente";
