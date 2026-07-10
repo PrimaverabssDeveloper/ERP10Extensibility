@@ -26,6 +26,7 @@ This repository is organized in two sections, in the section **samples** you wil
 | [Custom Form](samples/Custom%20Form) | List all sales document and allows perform drill-down to the source document and to the entity. |
 | [Custom Tab](samples/Custom%20Tabs) | Add a custom tab to customer entity. A Tab with goole maps integration. |
 | [Custom Ribbon](samples/Custom%20Ribbon) | Add's a new TAB on the ERP Ribbon. |
+| [Custom Smart Action](samples/Custom%20Smart%20Action) | Implements AI-powered (Pulse) Smart Actions using the Extensibility Function type. Demonstrates LLM-assisted data analysis, article import from PDF/Excel price tables, customer credit-risk diagnosis, sales document analysis, and HTML-to-PDF quotation generation. |
 | [Primavera Logger ](samples/Primavera%20Logger)| Log all the errors and events of your extensibility project. |
 | [Primavera.RelatedInfo](samples/Primavera.RelatedInfo) | Adds a new control to the invoice context panel to show the customer pending documents.|
 | [ScaleSample](samples/ScaleSample) | Provides an empty sample for dealing with scale within POS.|
